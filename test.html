@@ -1,723 +1,1288 @@
-<div class="eye"></div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 
-<div class="circle-1"></div>
-<div class="circle-2"></div>
-<div class="circle-3"></div>
-<div class="circle-4"></div>
-<div class="circle-5"></div>
-<div class="circle-6"></div>
-<div class="circle-7"></div>
-<div class="circle-8"></div>
-<div class="circle-9"></div>
-<div class="circle-10"></div>
-<div class="circle-11"></div>
-<div class="circle-12"></div>
-<div class="circle-13"></div>
-<div class="circle-14"></div>
+<!-- about -->
 
-<div class="glitch"></div>
+ <!-- end about -->
+ <img src="img/p1.jpg" class="btnPlay" alt="">
+ <div class="wrapper">
+	<div class="content">
+	   <div class="topContent">
+		  <div class="menuBar">
+			 <div class="icon topExpand"></div>
+			 <p class="appName">Your Library</p>
+			 <div class="icon menuHamburguer"></div>
+		  </div>
+		  <div class="musicGroups">
+			 <!-- Slider main container -->
+			 <div class="swiper-container slider-two">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper slider-two">
+				</div>
+ 
+			 </div>
+			 <!-- end Slider main container -->
+ 
+		  </div>
+ 
+	   </div>
+	   <div class="middleContent">
+ 
+		  <!-- Slider main container -->
+		  <div class="swiper-container slider-one">
+			 <!-- Additional required wrapper -->
+			 <div class="swiper-wrapper slider-one">
+			 </div>
+		  </div>
+		  <!-- end Slider main container -->
+	   </div>
+	   <div class="bottomContent">
+		  <div class="icon bottomExpand"></div>
+		  <div class="progressBar">
+			 <div class="timer">
+				<span class="currentTime">00:00</span>
+				<span class="endTime"></span>
+			 </div>
+			 <div class="barTimer"><span class="progress"></span></div>
+		  </div>
+		  <div class="player">
+			 <div class="icon shuffle"></div>
+			 <div class="icon prev swiper-button-prev"></div>
+			 <div class="btnPlay">
+				<div class="icon play"></div>
+			 </div>
+			 <div class="icon next swiper-button-next"></div>
+			 <div class="icon repeat"></div>
+ 
+		  </div>
+	   </div>
+ 
+	   <div class="albumBg">
+		  <figure class="bg"><img class="imageBg" src="" alt=""></figure>
+	   </div>
+ 
+	</div>
+	<div class="bodyBg"></div>
+ </div>
 
-<div class="fragment-1"></div>
-<div class="fragment-2"></div>
-<div class="fragment-3"></div>
 
-
-<svg width="190" height="190" viewBox="0 0 190 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<defs>
-		<clipPath id='bagel1'>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M95 190C147.467 190 190 147.467 190 95C190 42.533 147.467 0 95 0C42.533 0 0 42.533 0 95C0 147.467 42.533 190 95 190ZM95 120C108.807 120 120 108.807 120 95C120 81.1929 108.807 70 95 70C81.1929 70 70 81.1929 70 95C70 108.807 81.1929 120 95 120Z" />
-		</clipPath>
-		<clipPath id='bagel2'>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M71 142C110.212 142 142 110.212 142 71C142 31.7878 110.212 0 71 0C31.7878 0 0 31.7878 0 71C0 110.212 31.7878 142 71 142ZM71 139C108.555 139 139 108.555 139 71C139 33.4446 108.555 3 71 3C33.4446 3 3 33.4446 3 71C3 108.555 33.4446 139 71 139Z" />
-		</clipPath>
-		<clipPath id='bagel3'>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M60 120C93.1372 120 120 93.1372 120 60C120 26.8628 93.1372 0 60 0C26.8628 0 0 26.8628 0 60C0 93.1372 26.8628 120 60 120ZM60 115C90.3757 115 115 90.3757 115 60C115 29.6243 90.3757 5 60 5C29.6243 5 5 29.6243 5 60C5 90.3757 29.6243 115 60 115Z" />
-		</clipPath>
-		<clipPath id='bagel4'>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M38 76C58.9868 76 76 58.9868 76 38C76 17.0132 58.9868 0 38 0C17.0132 0 0 17.0132 0 38C0 58.9868 17.0132 76 38 76ZM38 72C56.7777 72 72 56.7776 72 38C72 19.2224 56.7777 4 38 4C19.2223 4 4 19.2224 4 38C4 56.7776 19.2223 72 38 72Z" />
-		</clipPath>
-	</defs>
-</svg>
-
-
-<style>
-
-
-body {
-	position: relative;
-	width: 100vw;
-	min-width: 800px;
-	height: 100vh;
-	min-height: 600px;
-	background: linear-gradient(-45deg, #8691b3, #edeef3);
+ <style>
+	 
+	 @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+.about {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.2s ease;
 }
-	body *, body *:before, body *:after {
-		content: '';
-		position: absolute;
-		top: 50%; left: 50%;
-	}
-
-
-.eye {
-	width: 332px; height: 332px;
-	transform: translate(-50%, -50%);
-	border-radius: 50%;
-	background: #EBEDF3;
-	filter: blur(5px);
-
-	animation: eyeAnimation 4s cubic-bezier(1, 0, 1, 1) infinite;
+@media screen and (max-width: 640px) {
+  .about {
+    display: none;
+  }
 }
-@keyframes eyeAnimation {
-	0%, 33%, 100% {
-		box-shadow: inset -8px -13px 20px -10px rgba(230, 230, 236, 0.04), 64px 55px 40px -40px #38406A, 20px 18px 30px -10px #38406A, inset -70px -50px 60px -30px #4b6398, inset -90px -90px 70px -90px #697398, inset -70px -50px 100px -40px #697398, inset 80px 50px 80px -50px #eeeef3, -25px -15px 50px -10px #F6F6FB, 14px -1px 50px -10px #7e7ea9, 1px 9px 50px -10px #7e7ea9, inset -90px 40px 60px -20px rgba(116, 66, 255, 0.1), inset -90px -120px 60px -20px rgba(116, 66, 255, 0.1);
-    transform: translate(-50%, -50%) scale(1.25);
-	}
-	65% {
-		box-shadow: inset -8px -13px 60px -10px rgba(230, 230, 236, 0.2), 44px 35px 20px -20px #687294, 11px 9px 9px -4px #6e799d, inset -100px -70px 40px -110px #6A789C, inset -90px -90px 70px -90px #697398, inset -70px -50px 100px -40px #697398, inset 80px 50px 80px -50px #eeeef3, -25px -15px 30px -10px #F6F6FB;
-		transform: translate(-50%, -50%) scale(1);
-	}
+.about .bg_links {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  backdrop-filter: blur(5px);
+  position: absolute;
 }
-
-
-	.eye::after {
-		width: 160px; height: 160px;
-		border-radius: 50%;
-		box-shadow: inset -50px -20px 30px 0px #e7e2f5, inset 100px 10px 20px -27px #2f2c4c, 0px 0px 10px 7px rgba(231, 226, 245, 1);
-
-		animation: pupilAnimationSize 4s cubic-bezier(1, 0, 1, 1) infinite,
-							 pupilAnimationView 4s ease infinite;
-	}
-@keyframes pupilAnimationSize {
-	0%, 30%, 100% { transform: translate(-50%, -50%) scale(0.85); }
-	40%, 90% 			{ transform: translate(-50%, -50%) scale(0.5); }
+.about .logo {
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  opacity: 0.9;
+  transition: all 1s 0.2s ease;
+  bottom: 0;
+  right: 0;
 }
-@keyframes pupilAnimationView {
-	0%, 30%, 100% {
-		box-shadow: inset -50px -20px 30px 0px #e7e2f5, inset 100px 10px 20px -27px #2f2c4c, 0px 0px 10px 7px rgba(231, 226, 245, 1);
-	}
-	60%, 66% {
-		box-shadow: inset -50px -20px 30px 0px rgba(231, 226, 245, 0), inset 10px 10px 70px -27px rgba(47, 44, 76, 0), 0px 0px 10px 7px hsla(256, 49%, 92%, 0);
-	}
-	90% {
-		box-shadow: inset -50px -20px 30px 0px #e7e2f5, inset 100px 10px 20px -27px #2f2c4c, 0px 0px 10px 7px rgba(231, 226, 245, 1);
-	}
+.about .social {
+  opacity: 0;
+  right: 0;
+  bottom: 0;
 }
-
-
-.circle-1 {
-	width: 475px; height: 475px;
-	border-radius: 50%;
-	border: 1px solid transparent;
-	border-right-color: rgba(223, 228, 255, 0.6);
-
-	animation: circle1AnimationOpacity 4s ease infinite,
-						 circle1AnimationMove 4s ease infinite;
+.about .social .icon {
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  display: flex;
+  transition: all 0.2s ease, background-color 0.4s ease;
+  opacity: 0;
+  border-radius: 100%;
 }
-@keyframes circle1AnimationMove {
-	00%, 100% 		{ transform: translate(-50%, -50%) rotate(49deg); }
-	07% 					{ transform: translate(-50%, -50%) rotate(38deg); }
-	12%, 19%, 68% { transform: translate(-50%, -50%) rotate(42deg); }
-	26%, 30% 			{ transform: translate(-50%, -50%) rotate(82deg); }
-	73% 					{ transform: translate(-50%, -50%) rotate(34deg); }
-	87%, 92% 			{ transform: translate(-50%, -50%) rotate(69deg); }
-	94% 					{ transform: translate(-50%, -50%) rotate(65deg); }
+.about .social.portfolio {
+  transition: all 0.8s ease;
 }
-@keyframes circle1AnimationOpacity {
-	00%, 27%, 73%, 100% { opacity: 1; }
-	30%, 70% 						{ opacity: 0; }
+.about .social.portfolio .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
 }
-
-
-.circle-2 {
-	width: 475px; height: 475px;
-	border-radius: 50%;
-	border: 1px solid transparent;
-	border-right-color: rgba(223, 228, 255, 0.6);
-
-	animation: circle2AnimationOpacity 4s ease infinite,
-						 circle2AnimationMove 4s ease infinite;
+.about .social.dribbble {
+  transition: all 0.3s ease;
 }
-@keyframes circle2AnimationMove {
-	0%, 100% { transform: translate(-50%, -50%) rotate(229deg); }
-	9% 			 { transform: translate(-50%, -50%) rotate(220deg); }
-	14%, 21% { transform: translate(-50%, -50%) rotate(225deg); }
-	29%, 67% { transform: translate(-50%, -50%) rotate(262deg); }
-	82% 		 { transform: translate(-50%, -50%) rotate(241deg); }
-	90%, 94% { transform: translate(-50%, -50%) rotate(249deg); }
-	99% 		 { transform: translate(-50%, -50%) rotate(245deg); }
+.about .social.dribbble .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/dribbble.svg);
 }
-@keyframes circle2AnimationOpacity {
-	0%, 27%, 79%, 100% { opacity: 1; }
-	30%, 76% 					 { opacity: 0; }
+.about .social.linkedin {
+  transition: all 0.8s ease;
 }
-
-
-.circle-3 {
-	left: calc(50% + 93px);
-	top: calc(50% - 189px);
-	width: 106px; height: 280px;
-	overflow: hidden;
+.about .social.linkedin .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/linkedin.svg);
 }
-	.circle-3::before {
-		left: -275%;
-		top: -4%;
-		width: 393px;
-		height: 393px;
-		border-radius: 50%;
-		border: 1px solid transparent;
-		border-right-color: rgba(223, 228, 255, 0.6);
-
-		animation: circle3Animation 4s ease infinite;
-	}
-@keyframes circle3Animation {
-	0%   { transform: rotate(-3deg); }
-	20%  { transform: rotate(-107deg); }
-	79%  { transform: rotate(-286deg); }
-	100% { transform: rotate(-364deg); }
+.about:hover {
+  width: 105px;
+  height: 105px;
+  transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
 }
-
-
-.circle-4 {
-	width: 295px; height: 295px;
-	border-radius: 50%;
-	border: 1px solid transparent;
-	border-right-color: rgb(251, 251, 251);
-	border-left-color: rgba(251, 251, 251, 0.2);
-
-	animation: circle4AnimationMove 4s cubic-bezier(1, 0, 1, 1) infinite,
-						 circle4AnimationOpacity 4s ease infinite;
+.about:hover .logo {
+  opacity: 1;
+  transition: all 0.6s ease;
 }
-@keyframes circle4AnimationMove {
-	0%, 100% { transform: translate(-50%, -50%) rotate(219deg) scale(1); }
-	6% 			 { transform: translate(-50%, -50%) rotate(221deg) scale(0.9); }
-	16% 		 { transform: translate(-50%, -50%) rotate(302deg) scale(0.9); }
-	22% 		 { transform: translate(-50%, -50%) rotate(307deg) scale(0.9); }
-	29% 		 { transform: translate(-50%, -50%) rotate(312deg) scale(0.93); }
-	33% 		 { transform: translate(-50%, -50%) rotate(310deg) scale(0.93); }
-	36% 		 { transform: translate(-50%, -50%) rotate(300deg) scale(0.7); }
-	39% 		 { transform: translate(-50%, -50%) rotate(220deg) scale(0.92); }
-	50%, 57% { transform: translate(-50%, -50%) rotate(248deg) scale(0.92); }
-	66% 		 { transform: translate(-50%, -50%) rotate(225deg) scale(0.92); }
-	73%, 81% { transform: translate(-50%, -50%) rotate(243deg) scale(0.92); }
-	93% 		 { transform: translate(-50%, -50%) rotate(215deg) scale(1); }
+.about:hover .social {
+  opacity: 1;
 }
-@keyframes circle4AnimationOpacity {
-	00%, 33%, 50%, 100% { opacity: 1; }
-	36%, 39% { opacity: 0; }
+.about:hover .social .icon {
+  opacity: 0.9;
+}
+.about:hover .social:hover {
+  background-size: 28px;
+}
+.about:hover .social:hover .icon {
+  background-size: 65%;
+  opacity: 1;
+}
+.about:hover .social.portfolio {
+  right: 0;
+  bottom: calc(100% - 40px);
+  transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.portfolio .icon:hover {
+  background-color: #698fb7;
+}
+.about:hover .social.dribbble {
+  bottom: 45%;
+  right: 45%;
+  transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.dribbble .icon:hover {
+  background-color: #ea4c89;
+}
+.about:hover .social.linkedin {
+  bottom: 0;
+  right: calc(100% - 40px);
+  transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin .icon:hover {
+  background-color: #0077b5;
 }
 
-
-.circle-5 {
-	width: 100px; height: 100px;
-	transform: translate(-50%, -50%);
-	
-	animation: circle5AnimationSize 4s cubic-bezier(1, 0, 1, 1) infinite,
-						 circle5AnimationView 4s ease infinite;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
 }
-	.circle-5::before {
-		width: 173px; height: 173px;
-		border-radius: 50%;
-		border: 1px solid rgb(251, 251, 251);
-		transform: translate(-50%, -50%);
-	}
-	.circle-5::after {
-		width: 177px; height: 177px;
-		border-radius: 50%;
-		border: 1px solid rgb(251, 251, 251);
-		transform: translate(-50%, -50%);
-	}
-@keyframes circle5AnimationSize {
-	0%, 38%, 82.82%, 100% { transform: translate(-50%, -50%) scale(1); }
-	45%, 75.44% 					{ transform: translate(-50%, -50%) scale(0.7); }
-}
-@keyframes circle5AnimationView {
-	0%, 5.7%, 7.4%, 9.8%, 11.5%, 14%, 15.6%, 18.9%, 21.3%, 23.8%, 25.4%, 28.7%, 35.3%, 42%, 77.9%, 82.7%, 83.6%, 85.2%, 86.1%, 91.8%, 93.5%, 97.6%, 100% { opacity: 1; }
-	2.5%, 6.6%, 8.2%, 10.7%, 14.8%, 18%, 20.5%, 22.1%, 24.6%, 27.9%, 36%, 88.6% { opacity: 0.5; }
-	47%, 77.8%, 82.8%, 83.5%, 85.3%, 86%, 90.2%, 92.7%, 96.8%, 99.2% { opacity: 0; }
+*:focus {
+  outline: 0;
 }
 
-
-.circle-6 {
-	top: 50%; left: 50%;
-	width: 190px; height: 190px;
-	background: repeating-conic-gradient(from 0deg, rgba(179, 221, 255, 0.4) 0deg 1deg, transparent 1deg 2deg);
-	clip-path: url(#bagel1);
-	border-radius: 50%;
-
-	animation: circle6Animation 4s cubic-bezier(1, 0, 1, 1) infinite;
+.wrapper {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  user-select: none;
+  letter-spacing: 0.8px;
 }
-@keyframes circle6Animation {
-	0% {
-		transform: translate(-50%, -50%) scale(1);
-	}
-	8%, 35% {
-		transform: translate(-50%, -50%) scale(0.93);
-		opacity: 1;
-	}
-	40%, 90% {
-		transform: translate(-50%, -50%) scale(0.2);
-		opacity: 0;
-	}
-	95%, 100% {
-		transform: translate(-50%, -50%) scale(1);
-		opacity: 1;
-	}
+@media screen and (max-height: 600px) {
+  .wrapper {
+    height: 100% !important;
+    min-height: 600px;
+  }
+}
+.wrapper .content {
+  width: 375px;
+  height: 760px;
+  margin: 60px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 640px) {
+  .wrapper .content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin: 0px 0;
+  }
+}
+.wrapper .content .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper .content .icon:before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper .content .icon:active:before {
+  width: 28px;
+  height: 28px;
+}
+.wrapper .content .icon.shuffle:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/shuffle.svg");
+  opacity: 0.5;
+}
+.wrapper .content .icon.prev:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/prev.svg");
+}
+.wrapper .content .icon.play:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/play.svg");
+}
+.wrapper .content .icon.next:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/next.svg");
+}
+.wrapper .content .icon.repeat:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/repeat.svg");
+  opacity: 0.5;
+}
+.wrapper .content .icon.bottomExpand {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/arrow-down.svg");
+}
+.wrapper .content .icon.topExpand {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/arrow-down.svg");
+}
+.wrapper .content .icon.menuHamburguer {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/menu.svg");
+}
+.wrapper .content .icon.plus:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/plus.svg");
+}
+.wrapper .content .icon.heart:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/heart.svg");
+}
+.wrapper .content .icon.heart.fave:before {
+  animation: fave 0.3s ease;
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/fave.svg");
+}
+@keyframes fave {
+  50% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+  }
+}
+.wrapper .content .icon.close:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/close.svg");
+}
+.wrapper .content .topContent {
+  width: 100%;
+  max-height: 60px;
+  background-color: rgba(232, 232, 240, 0.5);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s 0.2s ease;
+}
+.wrapper .content .topContent .menuBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.wrapper .content .topContent .menuBar .appName {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.wrapper .content .topContent .musicGroups {
+  width: 100%;
+  height: 80px;
+  margin-top: 25px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.4s ease;
+  visibility: hidden;
+  cursor: grab;
+}
+.wrapper .content .topContent .musicGroups:active {
+  cursor: grabbing;
+}
+.wrapper .content .topContent .musicGroups .swiper-slide {
+  width: 150px;
+  height: 80px;
+  margin-right: 20px;
+}
+.wrapper .content .topContent .musicGroups .swiper-slide:first-child {
+  margin-left: 20px;
+}
+.wrapper .content .topContent .musicGroups .group {
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.wrapper .content .topContent .musicGroups .group:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  z-index: 2;
+}
+.wrapper .content .topContent .musicGroups .group figure {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.wrapper .content .topContent .musicGroups .group figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.2);
+}
+.wrapper .content .topContent .musicGroups .group figure:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #252525 10%, transparent 100%);
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 1;
+}
+.wrapper .content .topContent .musicGroups .group .titleGroup {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.wrapper .content .topContent.expand {
+  max-height: 190px;
+  transition: all 0.4s ease;
+}
+.wrapper .content .topContent.expand .topExpand {
+  transform: rotate(180deg);
+}
+.wrapper .content .topContent.expand .musicGroups {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.4s 0.2s ease;
+  height: 100%;
+  visibility: visible;
+}
+.wrapper .content .middleContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrapper .content .middleContent .albumContent {
+  margin: 40px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .content .middleContent .albumContent.small {
+  width: 200px;
+}
+.wrapper .content .middleContent .albumContent.small .albumCover {
+  width: 200px;
+  height: 200px;
+  transition: all 0.4s ease;
+}
+@media screen and (max-height: 600px) {
+  .wrapper .content .middleContent .albumContent {
+    width: 200px;
+  }
+  .wrapper .content .middleContent .albumContent .albumCover {
+    width: 200px;
+    height: 200px;
+    transition: all 0.4s ease;
+  }
+}
+.wrapper .content .middleContent .albumCover {
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.4s 0.2s ease;
+  z-index: -1;
+}
+.wrapper .content .middleContent .albumCover:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.8) -20%, transparent 50%);
+}
+.wrapper .content .middleContent .albumCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.wrapper .content .middleContent .artistName,
+.wrapper .content .middleContent .songName {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  z-index: 2;
+}
+.wrapper .content .middleContent .artistName {
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.wrapper .content .middleContent .settings {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  transition: all 0s ease;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.wrapper .content .middleContent .playlistsContent {
+  background-color: rgba(232, 232, 240, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  transform: translateY(calc(-100% - 60px));
+  transition: all 0.8s cubic-bezier(0.8, -0.02, 0.25, 1);
+}
+.wrapper .content .middleContent .playlistsContent .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.wrapper .content .middleContent .playlistsContent .playlist {
+  width: calc(100% - 40px);
+  height: 100px;
+  min-height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  z-index: 3;
+  transition: all 0.2s ease;
+  border: 0px solid white;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.wrapper .content .middleContent .playlistsContent .playlist:last-child {
+  margin-bottom: 0;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 4px;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .checkbox:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  z-index: 1;
+  background-size: contain;
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/check.svg");
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.6, 0.02, 0.18, 1.25);
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistThumb {
+  width: 80px;
+  height: calc(100% - 20px);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: 10px;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5a5a5a;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistBg img {
+  width: 120%;
+  height: 160%;
+  object-fit: cover;
+  filter: blur(8px) grayscale(1);
+  opacity: 0.6;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistBg:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.8) -20%, transparent 50%);
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistTitle {
+  z-index: 1;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.wrapper .content .middleContent .playlistsContent .playlist.selected {
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+.wrapper .content .middleContent .playlistsContent .playlist.selected .checkbox:before {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+.wrapper .content .middleContent .playlistsContent .playlist.selected .playlistBg img {
+  filter: blur(8px) grayscale(0);
+}
+.wrapper .content .middleContent .swiper-container {
+  height: 100%;
+}
+.wrapper .content .middleContent .swiper-slide {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .content .middleContent .swiper-slide.open {
+  transform: translateY(0);
+}
+.wrapper .content .middleContent .swiper-slide-active .settings {
+  transition: all 0.4s 0.4s ease;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.wrapper .content .middleContent .swiper-slide-active.open .playlistsContent {
+  transform: translateY(0);
+}
+.wrapper .content .bottomContent {
+  width: 100%;
+  min-height: 100px;
+  max-height: 100px;
+  background-color: rgba(232, 232, 240, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s 0.2s ease;
+  padding: 5px 30px 20px 30px;
+  box-sizing: border-box;
+}
+.wrapper .content .bottomContent .bottomExpand {
+  transform: rotate(-180deg);
+  opacity: 0.5;
+}
+.wrapper .content .bottomContent .progressBar {
+  width: 100%;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+  transform: translateY(-60px);
+}
+@media screen and (max-width: 640px) {
+  .wrapper .content .bottomContent .progressBar {
+    box-sizing: border-box;
+  }
+}
+.wrapper .content .bottomContent .progressBar .timer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.wrapper .content .bottomContent .progressBar .barTimer {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  position: relative;
+}
+.wrapper .content .bottomContent .progressBar .barTimer .progress {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+.wrapper .content .bottomContent .player {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s 0.2s ease;
+}
+.wrapper .content .bottomContent .player .btnPlay {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.wrapper .content .bottomContent .player .btnPlay.pause {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.wrapper .content .bottomContent .player .btnPlay.pause .play:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/pause.svg");
+}
+.wrapper .content .bottomContent.expand {
+  transition: all 0.4s ease;
+  min-height: 200px;
+  max-height: 200px;
+  padding: 10px 30px 20px 30px;
+}
+.wrapper .content .bottomContent.expand .bottomExpand {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.wrapper .content .bottomContent.expand .progressBar {
+  opacity: 1;
+  visibility: visible;
+  height: 50px;
+  transition: all 0.4s 0.2s ease;
+  transform: translateY(-10px);
+}
+.wrapper .content .bottomContent.expand .player .btnPlay {
+  width: 60px;
+  height: 60px;
+}
+.wrapper .content .bottomContent.expand .player .btnPlay .icon:before {
+  width: 32px;
+  height: 32px;
+}
+.wrapper .content .bottomContent.expand .player .btnPlay .icon:active:before {
+  width: 38px;
+  height: 38px;
+}
+.wrapper .content .albumBg {
+  position: absolute;
+  width: 100%;
+  max-height: 760px;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 640px) {
+  .wrapper .content .albumBg {
+    max-height: 100vh;
+  }
+}
+@media screen and (max-height: 600px) {
+  .wrapper .content .albumBg {
+    max-height: 100%;
+    height: 100%;
+    min-height: 600px;
+  }
+}
+.wrapper .content .albumBg:before, .wrapper .content .albumBg:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) -40%, transparent 50%);
+  z-index: 1;
+}
+.wrapper .content .albumBg:after {
+  top: initial;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) -60%, transparent 50%);
+}
+.wrapper .content .albumBg .bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .content .albumBg .bg:before {
+  position: absolute;
+  content: "";
+  width: 150%;
+  height: 150%;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+.wrapper .content .albumBg .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper .content .albumBg.animeBg .bg {
+  animation: animeBg 0.6s ease-in-out both;
+}
+@keyframes animeBg {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 130%;
+    height: 130%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+.wrapper .content .albumBg.animeBg .bg:before {
+  animation: animeBg2 0.6s ease-in-out both;
+}
+@keyframes animeBg2 {
+  0% {
+    width: 150%;
+    height: 150%;
+    backdrop-filter: blur(10px);
+  }
+  50% {
+    backdrop-filter: blur(40px);
+  }
+  100% {
+    width: 150%;
+    height: 150%;
+    backdrop-filter: blur(10px);
+  }
+}
+.wrapper .bodyBg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -2;
+  transition: all 0.4s ease;
 }
 
-.circle-7 {
-	top: 50%; left: 50%;
-	width: 142px; height: 142px;
-	filter: blur(1px);
-
-	animation: circle6Animation 4s -0.1s cubic-bezier(1, 0, 1, 1) infinite;
-}
-	.circle-7::before {
-		top: 0; left: 0;
-		width: 100%; height: 100%;
-		background: repeating-conic-gradient(from 0deg, rgba(114, 87, 187, 0.6) 0deg 2deg, transparent 2deg 8deg);
-		clip-path: url(#bagel2);
-		border-radius: 50%;
-	}
-
-
-.circle-8 {
-	top: 50%; left: 50%;
-	width: 120px; height: 120px;
-	background: repeating-conic-gradient(from 0deg, rgba(236, 247, 255, 0.68) 0deg 1deg, transparent 1deg 2deg);
-	clip-path: url(#bagel3);
-	border-radius: 50%;
-
-	animation: circle6Animation 4s -0.13s cubic-bezier(1, 0, 1, 1) infinite;
+.swiper-button-prev,
+.swiper-button-next {
+  all: unset;
 }
 
+ </style>
 
-.circle-9 {
-	top: 50%; left: 50%;
-	width: 76px; height: 76px;
-	background: repeating-conic-gradient(from 0deg, rgba(236, 247, 255, 0.68) 0deg 1deg, transparent 1deg 2deg);
-	clip-path: url(#bagel4);
-	border-radius: 50%;
+ <script>
+	 window.addEventListener("load", event => {
+   ////////////////
+   // Variables
+   ////////////////
 
-	animation: circle6Animation 4s -0.16s cubic-bezier(1, 0, 1, 1) infinite;
-}
+   const iconTopExpand = document.querySelector(".icon.topExpand"),
+         iconBottomExpand = document.querySelector(".icon.bottomExpand"),
+         topContent = document.querySelector(".topContent"),
+         bottomContent = document.querySelector(".bottomContent"),
+         playBtn = document.querySelector(".btnPlay"),
+         musicGroups = document.querySelector(".swiper-wrapper.slider-two"),
+         swipperWrapper = document.querySelector(".swiper-wrapper.slider-one"),
+         imageBg = document.querySelector(".imageBg"),
+         albumBg = document.querySelector(".albumBg"),
+         wrapper = document.querySelector(".wrapper"),
+         bodyBg = document.querySelector(".bodyBg"),
+         next = document.querySelector(".swiper-button-next"),
+         prev = document.querySelector(".swiper-button-prev");
 
+   // Songs
+   const songs = [
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/jain.jpg",
+         artistName: "Jain",
+         songName: "Makeba",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song1.mp3",
+         color: "#f5c63d"
+      },
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/ohland.jpg",
+         artistName: "Oh Land",
+         songName: "Postpone the Bad",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song2.mp3",
+         color: "#afc5c3"
+      },
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/angele.jpg",
+         artistName: "Angèle",
+         songName: "La Loi de Murphy",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song3.mp3",
+         color: "#74c2dd"
+      },
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/broods.jpg",
+         artistName: "Broods",
+         songName: "Bridges",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song1.mp3",
+         color: "#a3b8b0"
+      },
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/alice.jpg",
+         artistName: "Alice Phoebe Lou",
+         songName: "Orbit",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song2.mp3",
+         color: "#38736d"
+      },
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/feist.jpg",
+         artistName: "Feist",
+         songName: "The Bad in Each Other",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song3.mp3",
+         color: "#a4b1b2"
+      },
 
-.circle-10 {
-	top: 50%; left: 50%;
-	width: 190px; height: 190px;
-	background: radial-gradient(rgba(230, 245, 255, 0.6), rgba(201, 243, 255, 0.5), rgba(74, 105, 160, 0.3), transparent 70%);
-	clip-path: url(#bagel1);
-	border-radius: 50%;
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/dagny.jpg",
+         artistName: "Dagny",
+         songName: "Ultraviolet",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song1.mp3",
+         color: "#8098ce"
+      },
+      {
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/sigrid.jpg",
+         artistName: "Sigrid",
+         songName: "Dynamite",
+         song: "https://www.rafaelalucas.com/dailyui/9/songs/song2.mp3",
+         color: "#1a91bd"
+      }
+   ];
 
-	animation: circle10Animation 4s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes circle10Animation {
-	0% {
-		transform: translate(-50%, -50%) scale(1);
-	}
-	4%, 30% {
-		transform: translate(-50%, -50%) scale(0.93);
-		opacity: 1;
-	}
-	35%, 93% {
-		transform: translate(-50%, -50%) scale(0);
-		opacity: 0;
-	}
-	98%, 100% {
-		transform: translate(-50%, -50%) scale(1);
-		opacity: 1;
-	}
-}
+   // Music Groups
+   const groups = [
+      {
+         title: "Songs",
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/img06.jpg"
+      },
+      {
+         title: "Artists",
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/img07.jpg"
+      },
+      {
+         title: "Playlists",
+         img:
+         "https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+      },
+      {
+         title: "Favourites",
+         img: "https://www.rafaelalucas.com/dailyui/9/covers/img10.jpg"
+      }
+   ];
 
+   // Playlists
+   const playlists = [
+      {
+         title: "Pop Music",
+         img:
+         "https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+      },
+      {
+         title: "On the road!",
+         img:
+         "https://images.pexels.com/photos/3049327/pexels-photo-3049327.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+      },
+      {
+         title: "Christmas Songs",
+         img:
+         "https://images.pexels.com/photos/1661905/pexels-photo-1661905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+      },
+      {
+         title: "Rainy days",
+         img:
+         "https://images.pexels.com/photos/216657/pexels-photo-216657.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+      }
+   ];
 
-.circle-11 {
-	top: 50%; left: 50%;
-	width: 190px; height: 190px;
-	background: repeating-conic-gradient(from 0deg, rgba(229, 243, 255, 0.1) 0deg 1deg, transparent 1deg 8deg, rgba(229, 243, 255, 0.3) 8deg 9deg, transparent 9deg 10deg, rgba(229, 243, 255, 0.1) 10deg 11deg, transparent 11deg 72deg);
-	clip-path: url(#bagel1);
-	border-radius: 50%;
+   ////////////////
+   // Events
+   ////////////////
 
-	animation: circle11Animation 4s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes circle11Animation {
-	0%, 98%, 100% {
-		transform: translate(-50%, -50%) rotate(0deg);
-		opacity: 1;
-	}
-	15% {
-		transform: translate(-50%, -50%) rotate(45deg);
-	}
-	25% {
-		transform: translate(-50%, -50%) rotate(-10deg);
-	}
-	30% {
-		opacity: 1;
-	}
-	35% {
-		transform: translate(-50%, -50%) rotate(-20deg);
-		opacity: 0;
-	}
-	93% {
-		transform: translate(-50%, -50%) rotate(80deg);
-		opacity: 0;
-	}
-}
+   iconTopExpand.addEventListener("click", expandTop);
+   iconBottomExpand.addEventListener("click", expandBottom);
+   playBtn.addEventListener("click", playSong);
 
+   ////////////////
+   // Functions
+   ////////////////
 
-.circle-12 {
-	top: 50%; left: 50%;
-	width: 190px; height: 190px;
-	background: repeating-conic-gradient(from 0deg, rgba(208, 233, 255, 0.2) 20deg 21deg, transparent 21deg 40deg, rgba(192, 223, 249, 0.25) 40deg 41deg, transparent 41deg 43deg, rgba(179, 220, 255, 0.15) 43deg 44deg, transparent 44deg 76deg);
-	clip-path: url(#bagel1);
-	border-radius: 50%;
+   function playSong() {
+      if (playBtn.classList.contains("pause")) {
+         playBtn.classList.remove("pause");
+         document.querySelector(".swiper-slide-active audio").pause();
+      } else {
+         playBtn.classList.add("pause");
+         document.querySelector(".swiper-slide-active audio").play();
+      }
+      progressBar();
+   }
 
-	animation: circle12Animation 4s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes circle12Animation {
-	0%, 96%, 100% {
-		transform: translate(-50%, -50%) rotate(0deg);
-		opacity: 1;
-	}
-	10% {
-		transform: translate(-50%, -50%) rotate(45deg);
-	}
-	25% {
-		transform: translate(-50%, -50%) rotate(-45deg);
-	}
-	30% {
-		opacity: 1;
-	}
-	35% {
-		transform: translate(-50%, -50%) rotate(50deg);
-		opacity: 0;
-	}
-	93% {
-		transform: translate(-50%, -50%) rotate(-90deg);
-		opacity: 0;
-	}
-}
+   function expandTop() {
+      if (topContent.classList.contains("expand")) {
+         topContent.classList.remove("expand");
+      } else {
+         topContent.classList.add("expand");
 
+         //Swiper Music Goups
+         var mySwiper2 = new Swiper(".swiper-container.slider-two", {
+            // Optional parameters
+            direction: "horizontal",
+            slidesPerView: "auto",
+            draggable: true
+         });
+      }
+      albumSize();
+   }
 
-.circle-13 {
-	width: 100px; height: 100px;
-	transform: translate(-50%, -50%);
-	animation: circle13AnimationSize 4s cubic-bezier(1, 0, 1, 1) infinite,
-						 circle13AnimationView 4s ease infinite;
-}
-	.circle-13::before {
-		width: 110px; height: 110px;
-		border-radius: 50%;
-		border: 1px solid rgb(251, 251, 251);
-		transform: translate(-50%, -50%);
-	}
-	.circle-13::after {
-		width: 120px; height: 120px;
-		border-radius: 50%;
-		border: 1px solid rgba(251, 251, 251, 0.5);
-		transform: translate(-50%, -50%);
-	}
-@keyframes circle13AnimationSize {
-	0%, 32%, 86%, 100% { transform: translate(-50%, -50%) scale(1); }
-	38%, 82% { transform: translate(-50%, -50%) scale(0.2); }
-}
-@keyframes circle13AnimationView {
-	/* подвигать */
-	0% { opacity: 1; }
-	2.5% { opacity: 0.5; }
-	5.7% { opacity: 1; }
-	6.6% { opacity: 0.5; }
-	7.4% { opacity: 1; }
-	8.2% { opacity: 0.5; }
-	9.8% { opacity: 1; }
-	10.7% { opacity: 0.5; }
-	11.5%, 14% { opacity: 1; }
-	14.8% { opacity: 0.5; }
-	15.6% { opacity: 1; }
-	18% { opacity: 0.5; }
-	18.9% { opacity: 1; }
-	20.5% { opacity: 0.5; }
-	21.3% { opacity: 1; }
-	22.1% { opacity: 0.5; }
-	23.8% { opacity: 1; }
-	24.6% { opacity: 0.5; }
-	25.4% { opacity: 1; }
-	27.9% { opacity: 0.5; }
-	28.7%, 32% { opacity: 1; }
-	38% { opacity: 0; }
-	82% { opacity: 0; }
-	86% { opacity: 1; }
-	88.6% { opacity: 0.5; }
-	90.2% { opacity: 0; }
-	91.8% { opacity: 1; }
-	92.7% { opacity: 0; }
-	93.5% { opacity: 1; }
-	96.8% { opacity: 0; }
-	97.6% { opacity: 1; }
-	99.2% { opacity: 0; }
-	100% { opacity: 1; }
-}
+   function expandBottom() {
+      if (bottomContent.classList.contains("expand")) {
+         bottomContent.classList.remove("expand");
+      } else {
+         bottomContent.classList.add("expand");
+      }
+      albumSize();
+      progressBar();
+   }
 
-.circle-14 {
-	width: 100px; height: 100px;
-	transform: translate(-50%, -50%);
-	animation: circle13AnimationSize 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite,
-						 circle14AnimationView 4s ease infinite;
-}
-	.circle-14::before {
-		width: 70px; height: 70px;
-		border-radius: 50%;
-		border: 1px solid rgba(251, 251, 251, 0.5);
-		transform: translate(-50%, -50%);
-	}
-	.circle-14::after {
-		width: 95px; height: 95px;
-		border-radius: 50%;
-		border: 1px solid rgba(251, 251, 251, 0.3);
-		transform: translate(-50%, -50%);
-	}
+   // change Album size
 
-@keyframes circle14AnimationView {
-	/* подвигать */
-	0% { opacity: 1; }
-	2.5% { opacity: 0.5; }
-	5.7% { opacity: 1; }
-	6.6% { opacity: 0.5; }
-	7.4% { opacity: 1; }
-	8.2% { opacity: 0.5; }
-	9.8% { opacity: 1; }
-	10.7% { opacity: 0.5; }
-	11.5%, 14% { opacity: 1; }
-	14.8% { opacity: 0.5; }
-	15.6% { opacity: 1; }
-	18% { opacity: 0.5; }
-	18.9% { opacity: 1; }
-	20.5% { opacity: 0.5; }
-	21.3% { opacity: 1; }
-	22.1% { opacity: 0.5; }
-	23.8% { opacity: 1; }
-	24.6% { opacity: 0.5; }
-	25.4% { opacity: 1; }
-	27.9% { opacity: 0.5; }
-	28.7%, 32% { opacity: 1; }
-	38% { opacity: 0; }
-	82% { opacity: 0; }
-	86% { opacity: 1; }
-	88.6% { opacity: 0.5; }
-	90.2% { opacity: 0; }
-	91.8% { opacity: 1; }
-	92.7% { opacity: 0; }
-	93.5% { opacity: 1; }
-	96.8% { opacity: 0; }
-	97.6% { opacity: 1; }
-	99.2% { opacity: 0; }
-	100% { opacity: 1; }
-}
+   function albumSize() {
+      const albumContent = document.querySelectorAll(".albumContent");
 
+      if (
+         topContent.classList.contains("expand") &&
+         bottomContent.classList.contains("expand")
+      ) {
+         albumContent.forEach(function(el) {
+            el.classList.add("small");
+         });
+      } else {
+         albumContent.forEach(function(el) {
+            el.classList.remove("small");
+         });
+      }
+   }
 
-.glitch {
-	width: 2px; height: 2px;
-	box-shadow: -21px -75px #8AC7ED, -16px -78px #8AC7ED, -8px -78px #8AC7ED, -5px -77px #8AC7ED, -2px -79px #8AC7ED, 10px -79px #8AC7ED, 25px -73px #8AC7ED, 41px -71px #8AC7ED, 44px -68px #8AC7ED, -26px -72px #8AC7ED, -45px -62px #8AC7ED, -65px -57px #8AC7ED, 59px -49px #8AC7ED, 67px -52px #8AC7ED, 37px -69px #8AC7ED, 43px -62px #8AC7ED, 39px -62px #8AC7ED, 17px -71px #8AC7ED, 28px -67px #8AC7ED, 65px -32px #8AC7ED, 73px -24px #8AC7ED, 67px -25px #8AC7ED, 76px -14px #8AC7ED, 70px -18px #8AC7ED, 82px 21px #8AC7ED, 79px 20px #8AC7ED, 72px 15px #8AC7ED, 55px 45px #8AC7ED, 48px 51px #8AC7ED, 43px 58px #8AC7ED, 37px 57px #8AC7ED, 36px 63px #8AC7ED, 32px 76px #8AC7ED, 35px 70px #8AC7ED, 25px 71px #8AC7ED, 20px 75px #8AC7ED, 5px 70px #8AC7ED, 7px 75px #8AC7ED, -5px 79px #8AC7ED, 3px 78px #8AC7ED, -1px 77px #8AC7ED, -13px 78px #8AC7ED, -15px 82px #8AC7ED, -20px 76px #8AC7ED, -18px 78px #8AC7ED, -17px 75px #8AC7ED, -22px 72px #8AC7ED, -34px 72px #8AC7ED, -36px 69px #8AC7ED, -43px 74px #8AC7ED, -41px 72px #8AC7ED, -42px 69px #8AC7ED, -38px 66px #8AC7ED, -43px 63px #8AC7ED, -37px 61px #8AC7ED, -56px 66px #8AC7ED, -54px 61px #8AC7ED, -58px 54px #8AC7ED, -60px 41px #8AC7ED, -50px 56px #8AC7ED, -54px 57px #8AC7ED, -60px 52px #8AC7ED, -74px 35px #8AC7ED, -76px 18px #8AC7ED, -74px 25px #8AC7ED, -69px 23px #8AC7ED, -84px 13px #8AC7ED, -73px 3px #8AC7ED, -80px -1px #8AC7ED, -79px -4px #8AC7ED, -79px -7px #8AC7ED, -70px -11px #8AC7ED, -67px -23px #8AC7ED, -84px -13px #8AC7ED, -71px -42px #8AC7ED, -61px -49px #8AC7ED, -58px -43px #8AC7ED, -55px -50px #8AC7ED, -32px -72px #8AC7ED, -80px -30px #8AC7ED, -59px -20px #8AC7ED, -79px 12px #8AC7ED, -76px 1px #8AC7ED, 8px 57px #8AC7ED, 59px 36px #8AC7ED, 60px 46px #8AC7ED, 54px 59px #8AC7ED, 44px 52px #8AC7ED, -31px 20px #8AC7ED, -56px 2px #8AC7ED, 47px 35px #8AC7ED, 70px 6px #8AC7ED, 60px -2px #8AC7ED,
-							-21px -75px 0 1px rgba(255, 255, 255, 0.1), -16px -78px 0 1px rgba(255, 255, 255, 0.1), -8px -78px 0 1px rgba(255, 255, 255, 0.1), -5px -77px 0 1px rgba(255, 255, 255, 0.1), -2px -79px 0 1px rgba(255, 255, 255, 0.1), 10px -79px 0 1px rgba(255, 255, 255, 0.1), 25px -73px 0 1px rgba(255, 255, 255, 0.1), 41px -71px 0 1px rgba(255, 255, 255, 0.1), 44px -68px 0 1px rgba(255, 255, 255, 0.1), -26px -72px 0 1px rgba(255, 255, 255, 0.1), -45px -62px 0 1px rgba(255, 255, 255, 0.1), -65px -57px 0 1px rgba(255, 255, 255, 0.1), 59px -49px 0 1px rgba(255, 255, 255, 0.1), 67px -52px 0 1px rgba(255, 255, 255, 0.1), 37px -69px 0 1px rgba(255, 255, 255, 0.1), 43px -62px 0 1px rgba(255, 255, 255, 0.1), 39px -62px 0 1px rgba(255, 255, 255, 0.1), 17px -71px 0 1px rgba(255, 255, 255, 0.1), 28px -67px 0 1px rgba(255, 255, 255, 0.1), 65px -32px 0 1px rgba(255, 255, 255, 0.1), 73px -24px 0 1px rgba(255, 255, 255, 0.1), 67px -25px 0 1px rgba(255, 255, 255, 0.1), 76px -14px 0 1px rgba(255, 255, 255, 0.1), 70px -18px 0 1px rgba(255, 255, 255, 0.1), 82px 21px 0 1px rgba(255, 255, 255, 0.1), 79px 20px 0 1px rgba(255, 255, 255, 0.1), 72px 15px 0 1px rgba(255, 255, 255, 0.1), 55px 45px 0 1px rgba(255, 255, 255, 0.1), 48px 51px 0 1px rgba(255, 255, 255, 0.1), 43px 58px 0 1px rgba(255, 255, 255, 0.1), 37px 57px 0 1px rgba(255, 255, 255, 0.1), 36px 63px 0 1px rgba(255, 255, 255, 0.1), 32px 76px 0 1px rgba(255, 255, 255, 0.1), 35px 70px 0 1px rgba(255, 255, 255, 0.1), 25px 71px 0 1px rgba(255, 255, 255, 0.1), 20px 75px 0 1px rgba(255, 255, 255, 0.1), 5px 70px 0 1px rgba(255, 255, 255, 0.1), 7px 75px 0 1px rgba(255, 255, 255, 0.1), -5px 79px 0 1px rgba(255, 255, 255, 0.1), 3px 78px 0 1px rgba(255, 255, 255, 0.1), -1px 77px 0 1px rgba(255, 255, 255, 0.1), -13px 78px 0 1px rgba(255, 255, 255, 0.1), -15px 82px 0 1px rgba(255, 255, 255, 0.1), -20px 76px 0 1px rgba(255, 255, 255, 0.1), -18px 78px 0 1px rgba(255, 255, 255, 0.1), -17px 75px 0 1px rgba(255, 255, 255, 0.1), -22px 72px 0 1px rgba(255, 255, 255, 0.1), -34px 72px 0 1px rgba(255, 255, 255, 0.1), -36px 69px 0 1px rgba(255, 255, 255, 0.1), -43px 74px 0 1px rgba(255, 255, 255, 0.1), -41px 72px 0 1px rgba(255, 255, 255, 0.1), -42px 69px 0 1px rgba(255, 255, 255, 0.1), -38px 66px 0 1px rgba(255, 255, 255, 0.1), -43px 63px 0 1px rgba(255, 255, 255, 0.1), -37px 61px 0 1px rgba(255, 255, 255, 0.1), -56px 66px 0 1px rgba(255, 255, 255, 0.1), -54px 61px 0 1px rgba(255, 255, 255, 0.1), -58px 54px 0 1px rgba(255, 255, 255, 0.1), -60px 41px 0 1px rgba(255, 255, 255, 0.1), -50px 56px 0 1px rgba(255, 255, 255, 0.1), -54px 57px 0 1px rgba(255, 255, 255, 0.1), -60px 52px 0 1px rgba(255, 255, 255, 0.1), -74px 35px 0 1px rgba(255, 255, 255, 0.1), -76px 18px 0 1px rgba(255, 255, 255, 0.1), -74px 25px 0 1px rgba(255, 255, 255, 0.1), -69px 23px 0 1px rgba(255, 255, 255, 0.1), -84px 13px 0 1px rgba(255, 255, 255, 0.1), -73px 3px 0 1px rgba(255, 255, 255, 0.1), -80px -1px 0 1px rgba(255, 255, 255, 0.1), -79px -4px 0 1px rgba(255, 255, 255, 0.1), -79px -7px 0 1px rgba(255, 255, 255, 0.1), -70px -11px 0 1px rgba(255, 255, 255, 0.1), -67px -23px 0 1px rgba(255, 255, 255, 0.1), -84px -13px 0 1px rgba(255, 255, 255, 0.1), -71px -42px 0 1px rgba(255, 255, 255, 0.1), -61px -49px 0 1px rgba(255, 255, 255, 0.1), -58px -43px 0 1px rgba(255, 255, 255, 0.1), -55px -50px 0 1px rgba(255, 255, 255, 0.1), -32px -72px 0 1px rgba(255, 255, 255, 0.1), -80px -30px 0 1px rgba(255, 255, 255, 0.1), -59px -20px 0 1px rgba(255, 255, 255, 0.1), -79px 12px 0 1px rgba(255, 255, 255, 0.1), -76px 1px 0 1px rgba(255, 255, 255, 0.1), 8px 57px 0 1px rgba(255, 255, 255, 0.1), 59px 36px 0 1px rgba(255, 255, 255, 0.1), 60px 46px 0 1px rgba(255, 255, 255, 0.1), 54px 59px 0 1px rgba(255, 255, 255, 0.1), 44px 52px 0 1px rgba(255, 255, 255, 0.1), -31px 20px 0 1px rgba(255, 255, 255, 0.1), -56px 2px 0 1px rgba(255, 255, 255, 0.1), 47px 35px 0 1px rgba(255, 255, 255, 0.1), 70px 6px 0 1px rgba(255, 255, 255, 0.1), 60px -2px 0 1px rgba(255, 255, 255, 0.1);
-	filter: blur(1px);
+   //Swiper Albums
 
-	animation: glitchAnimationOpacity 4s cubic-bezier(1, 0, 1, 1) infinite,
-						 glitchAnimationMove 4s cubic-bezier(1, 0, 1, 1) infinite,
-						 glitchAnimationBright 4s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes glitchAnimationOpacity {
-	0%, 30%, 96%, 100% { opacity: 1; }
-	35%, 93% 					 { opacity: 0; }
-}
-@keyframes glitchAnimationMove {
-	0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-	35%, 65% { transform: translate(-50%, -50%) rotate(4320deg); }
-}
-@keyframes glitchAnimationBright {
-	0%, 100% { filter: blur(1px); }
-	35%, 65% { filter: blur(1px) brightness(1.8); }
-}
+   songs.forEach(function(el) {
+      let template = `
+<div class="swiper-slide">
+<div class="settings">
+<div class="icon heart"></div>
+<div class="icon plus"></div>
+</div>
+<audio src="${el.song}"></audio>
+<div class="albumContent">
+<div class="albumCover" style="background-color:${
+      el.color
+      }"><img src="${el.img}"></div>
+<p class="artistName">${el.artistName}</p>
+<p class="songName">${el.songName}</p></div>
+<div class="playlistsContent">
+<div class="icon close"></div>
+</div>
+</div>`;
 
+      swipperWrapper.insertAdjacentHTML("beforeend", template);
+   });
 
-.fragment-1::before {
-	width: 6px; height: 6px;
-	border: 2px solid rgba(255, 255, 255, 0.3);
-	border-radius: 2px;
-	
-	animation: fragment1BeforeAnimationMove 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes fragment1BeforeAnimationMove {
-	0%, 100% {
-		transform: rotate(0deg) translate(71px, -181px);
-		opacity: 1;
-	}
-	37% {
-		transform: rotate(15deg) translate(71px, -181px);
-		opacity: 1;
-	}
-	37.1%, 76.9% {
-		opacity: 0;
-	}
-	77% {
-		transform: rotate(-2deg) translate(71px, -181px);
-		opacity: 1;
-	}
-	90% {
-		transform: rotate(-9deg) translate(71px, -181px);
-	}
-}
+   // To Create Playlists
+   playlists.forEach(function(el) {
+      let templatePlaylist = `
+<div class="playlist">
+<span class="checkbox"></span>
+<figure class="playlistBg"><img src="${el.img}"></figure>
+<figure class="playlistThumb"><img src="${el.img}"></figure>
+<p class="playlistTitle">${el.title}</p></div>`;
 
+      var playlistContent = document.querySelectorAll(".playlistsContent");
 
-.fragment-1::after {
-	width: 6px; height: 6px;
-	border: 2px solid rgba(255, 255, 255, 0.3);
-	border-radius: 2px;
+      playlistContent.forEach(function(el) {
+         el.insertAdjacentHTML("beforeend", templatePlaylist);
+      });
+   });
 
-	animation: fragment1AfterAnimationMove 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes fragment1AfterAnimationMove {
-	0%, 100% {
-		transform: rotate(0deg) translate(285px, 48px);
-		opacity: 1;
-	}
-	7% {
-		transform: rotate(5deg) translate(285px, 48px);
-	}
-	22% {
-		transform: rotate(-1deg) translate(285px, 48px);
-	}
-	40% {
-		transform: rotate(-3deg) translate(285px, 48px);
-		opacity: 1;
-	}
-	40.1%, 81.9% {
-		opacity: 0;
-	}
-	82% {
-		transform: rotate(-15deg) translate(285px, 48px);
-		opacity: 1;
-	}
-}
+   // Slider Songs (Middle)
 
+   var mySwiper = new Swiper(".swiper-container.slider-one", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 600,
+      allowTouchMove: false,
+      effect: "coverflow",
 
-.fragment-2::after {
-	width: 6px; height: 6px;
-	border: 2px solid rgba(255, 255, 255, 0.3);
-	border-radius: 2px;
+      coverflowEffect: {
+         rotate: 40,
+         slideShadows: false
+      },
 
-	animation: fragment2AfterAnimationMove 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes fragment2AfterAnimationMove {
-	0%, 100% {
-		transform: rotate(0deg) translate(-220px, 162px);
-		opacity: 1;
-	}
-	46% {
-		transform: rotate(-8deg) translate(-220px, 162px);
-		opacity: 1;
-	}
-	46.1%, 97.9% {
-		opacity: 0;
-	}
-	98% {
-		transform: rotate(2deg) translate(-220px, 162px);
-		opacity: 1;
-	}
-}
+      // Navigation arrows
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev"
+      }
+   });
 
+   // Change Song & Album BG
+   next.addEventListener("click", changeSong);
+   prev.addEventListener("click", changeSong);
 
-.fragment-2::before {
-	width: 6px; height: 6px;
-	border: 2px solid rgba(255, 255, 255, 0.3);
-	border-radius: 2px;
+   function changeSong() {
+      if (playBtn.classList.contains("pause")) {
+         document.querySelectorAll("audio").forEach(function(el) {
+            el.pause();
+         });
+         document.querySelector(".swiper-slide-active audio").play();
+      }
+      changeBg();
+      progressBar();
+      closePlaylists();
+      changeBgColor();
+   }
 
-	animation: fragment2BeforeAnimationMove 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes fragment2BeforeAnimationMove {
-	0%, 100% {
-		transform: rotate(0deg) translate(284px, 111px);
-		opacity: 1;
-	}
-	2% {
-		transform: rotate(2deg) translate(284px, 111px);
-	}
-	9% {
-		transform: rotate(-5deg) translate(284px, 111px);
-	}
-	15%, 22% {
-		transform: rotate(-3deg) translate(284px, 111px);
-	}
-	27% {
-		transform: rotate(-2deg) translate(284px, 111px);
-		opacity: 1;
-	}
-	38.9% {
-		transform: rotate(-9deg) translate(284px, 111px);
-	}
-	39%, 76.9% {
-		opacity: 0;
-	}
-	77% {
-		transform: rotate(-9deg) translate(284px, 111px);
-		opacity: 1;
-	}
-}
+   function changeBg() {
+      albumBg.classList.add("animeBg");
 
+      setTimeout(() => {
+         imageBg.src = document.querySelector(
+            ".slider-one .swiper-slide-active img"
+         ).src;
+      }, 300);
 
-.fragment-3::after {
-	width: 6px; height: 6px;
-	background: rgba(255, 255, 255, 0.3);
-	border-radius: 2px;
+      setTimeout(() => {
+         albumBg.classList.remove("animeBg");
+      }, 700);
+   }
 
-	animation: fragment3AfterAnimationMove 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes fragment3AfterAnimationMove {
-	0%, 4.9%, 65.1%, 100% {
-		opacity: 0;
-	}
-	5% {
-		transform: rotate(0deg) translate(183px, 198px);
-		opacity: 1;
-	}
-	16% {
-		transform: rotate(-9deg) translate(284px, 111px);
-		opacity: 1;
-	}
-	16.1%, 60.9% {
-		opacity: 0;
-	}
-	61% {
-		transform: rotate(5deg) translate(284px, 111px);
-		opacity: 1;
-	}
-	65% {
-		transform: rotate(10deg) translate(284px, 111px);
-		opacity: 1;
-	}
-}
+   function changeBgColor() {
+      var getColor = document.querySelector(
+         ".slider-one .swiper-slide-active .albumCover"
+      ),
+          activeColor = getColor.style.backgroundColor;
 
+      setTimeout(() => {
+         bodyBg.style.backgroundColor = activeColor;
+      }, 200);
+   }
 
-.fragment-3::before {
-	width: 6px; height: 6px;
-	background: rgba(255, 255, 255, 0.3);
-	border-radius: 2px;
+   // Music Groups
 
-	animation: fragment3BeforeAnimationMove 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes fragment3BeforeAnimationMove {
-	0%, 100% {
-		transform: rotate(0deg) translate(-253px, -126px);
-		opacity: 1;
-	}
-	22% {
-		transform: rotate(25deg) translate(-253px, -126px);
-		opacity: 1;
-	}
-	22.1%, 95.9% {
-		opacity: 0;
-	}
-	96% {
-		transform: rotate(-5deg) translate(-253px, -126px);
-		opacity: 1;
-	}
-}
-</style>
+   for (let i = 0; i < groups.length; i++) {
+      const { title, img } = groups[i];
+
+      var template2 = `<div class="swiper-slide group">
+<figure><img src="${img}"></figure>
+<p class = "titleGroup">${title}</p>
+</div>`;
+
+      musicGroups.insertAdjacentHTML("beforeend", template2);
+   }
+
+   // Add favourites & Playlist
+
+   const heart = document.querySelectorAll(".heart"),
+         plus = document.querySelectorAll(".plus"),
+         close = document.querySelectorAll(".close"),
+         playlist = document.querySelectorAll(".playlist");
+
+   heart.forEach(function(el) {
+      el.addEventListener("click", addFave);
+   });
+
+   plus.forEach(function(el) {
+      el.addEventListener("click", openPlaylists);
+   });
+
+   close.forEach(function(el) {
+      el.addEventListener("click", openPlaylists);
+   });
+
+   playlist.forEach(function(el) {
+      el.addEventListener("click", addPlaylist);
+   });
+
+   function addFave(e) {
+      if (e.currentTarget.classList.contains("fave")) {
+         e.currentTarget.classList.remove("fave");
+      } else {
+         e.currentTarget.classList.add("fave");
+      }
+   }
+
+   function openPlaylists(e) {
+      if (
+         e.currentTarget
+         .closest(".swiper-slide-active")
+         .classList.contains("open")
+      ) {
+         e.currentTarget
+            .closest(".swiper-slide-active")
+            .classList.remove("open");
+      } else {
+         e.currentTarget.closest(".swiper-slide-active").classList.add("open");
+      }
+   }
+
+   function closePlaylists() {
+      document.querySelector(".swiper-slide-active").classList.remove("open");
+   }
+
+   function addPlaylist(e) {
+      if (e.currentTarget.classList.contains("selected")) {
+         e.currentTarget.classList.remove("selected");
+      } else {
+         e.currentTarget.classList.add("selected");
+      }
+   }
+
+   // Song Progress Bar
+
+   function formatTime(seconds) {
+      minutes = Math.floor(seconds / 60);
+      minutes = minutes >= 10 ? minutes : "0" + minutes;
+      seconds = Math.floor(seconds % 60);
+      seconds = seconds >= 10 ? seconds : "0" + seconds;
+      return minutes + ":" + seconds;
+   }
+
+   function progressBar() {
+      var songDuration = document.querySelector(".swiper-slide-active audio")
+      .duration,
+          endTime = document.querySelector(".endTime"),
+          songAudio = document.querySelector(".swiper-slide-active audio"),
+          currentTime = document.querySelector(".currentTime");
+
+      endTime.innerHTML = formatTime(songDuration);
+
+      songAudio.ontimeupdate = function() {
+         var progress = document.querySelector(".progress");
+         progress.style.width =
+            songAudio.currentTime * 100 / songDuration + "%";
+         currentTime.innerHTML = formatTime(songAudio.currentTime);
+      };
+   }
+
+   ////////////////
+   // Call Functions
+   ////////////////
+
+   changeBg();
+   progressBar();
+   changeBgColor();
+
+   wrapper.style.height = window.innerHeight + "px";
+
+   console.log(window.innerHeight);
+});
+
+ </script>

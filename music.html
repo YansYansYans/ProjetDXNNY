@@ -2,538 +2,413 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Retrouvez toute les musiques de l'artiste DXNNY mondialement connu dans le mond entier.">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+                content="Retrouvez toute les musiques de l'artiste DXNNY mondialement connu dans le mond entier.">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="index.js" async></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="index.js" async></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
 
-    <title>DXNNY - BeatMaker</title>
+        <title>DXNNY - BeatMaker</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="img/logo.ico" rel="shortcut icon" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+                integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+                crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="img/logo.ico" rel="shortcut icon" />
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 </head>
 
 <body>
 
-    <div class="burger">
-        <span></span>
-    </div>
-
-    <nav>
-        <ul class="main">
-            <li><a href="index.html" class="vis">Home</a></li>
-            <li><a href="music.html" class="vis">Music</a></li>
-            <li><a href="about.html" class="vis">About</a></li>
-            <li><a href="contact.html" class="vis">Contact</a></li>
-        </ul>
-
-        <div class="about" class="vis">
-            <p class="desc" style="font-family: sans-serif;">DXNNY is a beatmaker, musician and artist that do his song
-                with FL Studio and a computer ... only !</p>
+        <div class="burger">
+                <span class="span-music"></span>
         </div>
 
-        <div class="social" class="vis">
-            <a href="https://soundcloud.com/user-681905804"><i class="fab fa-soundcloud"></i></a>
+        <nav>
+                <ul class="main">
+                        <li><a href="index.html" class="vis">Home</a></li>
+                        <li><a href="music.html" class="vis">Music</a></li>
+                        <li><a href="about.html" class="vis">About</a></li>
+                        <li><a href="contact.html" class="vis">Contact</a></li>
+                </ul>
+
+                <div class="about" class="vis">
+                        <p class="desc" style="font-family: sans-serif;">DXNNY is a beatmaker, musician and artist that
+                                do his song
+                                with FL Studio and a computer ... only !</p>
+                </div>
+
+                <div class="social" class="vis">
+                        <a href="https://soundcloud.com/user-681905804"><i class="fab fa-soundcloud"></i></a>
+                </div>
+
+                <ul class="sub" class="vis">
+                        <li><a href="#0">FAQ &amp; Shipping</a></li>
+                        <li><a href="#0">Terms &amp; Conditions</li>
+                </ul>
+        </nav>
+
+
+        <div class="containers">
+                <div class="hs__wrapper">
+                        <div class="hs__header">
+                                <h2 class="hs__headline">News Musics
+                                </h2>
+                                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a
+                                                class="arrow arrow-next"></a></div>
+                        </div>
+                        <ul class="hs">
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play1">
+                                                <img class="hs__item__image" src="img/r1.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">SO HOW
+                                                        ?</span><span class="hs__item__subtitle">Remix Niykee Heaton
+                                                        (infinity)</span></div>
+                                                        <audio class="m1" src="song/sohow.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play2">
+                                                <img class="hs__item__image" src="img/r2.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">THE
+                                                        GAME</span><span class="hs__item__subtitle">Remix Banks (waiting
+                                                        Game)</span></div>
+                                                        <audio class="m2" src="song/thegame.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play3">
+                                                <img class="hs__item__image" src="img/r3.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">WHEN I MET
+                                                        YOU</span><span class="hs__item__subtitle">Remix Daughter
+                                                        (medicine)</span></div>
+                                                        <audio class="m3" src="song/when.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play4">
+                                                <img class="hs__item__image" src="img/r4.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">WOO</span><span
+                                                        class="hs__item__subtitle">Remix XXXTENTACION (school
+                                                        Globes)</span></div>
+                                                        <audio class="m4" src="song/woo.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play5">
+                                                <img class="hs__item__image" src="img/r5.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">TAKE ME
+                                                        BACK</span><span class="hs__item__subtitle">Remix Lord Huron
+                                                        (the Night We Met)</span></div>
+                                                        <audio class="m5" src="song/take.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play6">
+                                                <img class="hs__item__image" src="img/r6.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">PROJET
+                                                        Y</span><span class="hs__item__subtitle">by DXNNY</span></div>
+                                                        <audio class="m6" src="song/PROJETY.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play7">
+                                                <img class="hs__item__image" src="img/r7.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">FALLING
+                                                        SUNLIGHT</span><span class="hs__item__subtitle">by DXNNY</span>
+                                                        <audio class="m7" src="song/failling.mp3" controls></audio>
+                                        </div>
+                                </li>
+                        </ul>
+                </div>
+                <div class="hs__wrapper">
+                        <div class="hs__header">
+                                <h2 class="hs__headline">Most Popular
+                                </h2>
+                                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a
+                                                class="arrow arrow-next"></a></div>
+                        </div>
+                        <ul class="hs">
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play8">
+                                                <img class="hs__item__image" src="img/p1.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span
+                                                        class="hs__item__title">OXYDE</span><span
+                                                        class="hs__item__subtitle">by DXNNY</span></div>
+                                                        <audio class="m8" src="song/OXYDE.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play9">
+                                                <img class="hs__item__image" src="img/p3.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span
+                                                        class="hs__item__title">VIRUS</span><span
+                                                        class="hs__item__subtitle">by DXNNY (feat YaProd)</span></div>
+                                                        <audio class="m9" src="song/VIRUS.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play10">
+                                                <img class="hs__item__image" src="img/p4.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span
+                                                        class="hs__item__title">VENUS</span><span
+                                                        class="hs__item__subtitle">by DXNNY</span></div>
+                                                        <audio class="m10" src="song/VENUS.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play11">
+                                                <img class="hs__item__image" src="img/r4.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">WOO</span><span
+                                                        class="hs__item__subtitle">Remix XXXTENTACION (school
+                                                        Globes)</span></div>
+                                                        <audio class="m11" src="song/woo.mp3" controls></audio>
+                                </li>
+                                <li class="hs__item">
+                                        <div class="hs__item__image__wrapper" id="play12">
+                                                <img class="hs__item__image" src="img/r6.jpg" alt="" />
+                                        </div>
+                                        <div class="hs__item__description"><span class="hs__item__title">PROJET
+                                                        Y</span><span class="hs__item__subtitle">by DXNNY</span></div>
+                                                        <audio class="m12" src="song/PROJETY.mp3" controls></audio>
+                                </li>
+                        </ul>
+                </div>
+                <div class="hs__wrapper">
+                        <div class="hs__header">
+                                <h2 class="hs__headline">All Song
+                                </h2>
+                                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a
+                                                class="arrow arrow-next"></a></div>
+                        </div>
+                        <ul class="hs">
+                                
+                        </ul>
+                </div>
         </div>
 
-        <ul class="sub" class="vis">
-            <li><a href="#0">FAQ &amp; Shipping</a></li>
-            <li><a href="#0">Terms &amp; Conditions</li>
-        </ul>
-    </nav>
+
+        <script>
+                // work in progress - needs some refactoring and will drop JQuery i promise :)
+                var instance = $(".hs__wrapper");
+                $.each(instance, function (key, value) {
+
+                        var arrows = $(instance[key]).find(".arrow"),
+                                prevArrow = arrows.filter('.arrow-prev'),
+                                nextArrow = arrows.filter('.arrow-next'),
+                                box = $(instance[key]).find(".hs"),
+                                x = 0,
+                                mx = 0,
+                                maxScrollWidth = box[0].scrollWidth - (box[0].clientWidth / 2) - (box
+                                        .width() / 2);
+
+                        $(arrows).on('click', function () {
+
+                                if ($(this).hasClass("arrow-next")) {
+                                        x = ((box.width() / 2)) + box.scrollLeft() - 10;
+                                        box.animate({
+                                                scrollLeft: x,
+                                        })
+                                } else {
+                                        x = ((box.width() / 2)) - box.scrollLeft() - 10;
+                                        box.animate({
+                                                scrollLeft: -x,
+                                        })
+                                }
+
+                        });
+
+                        $(box).on({
+                                mousemove: function (e) {
+                                        var mx2 = e.pageX - this.offsetLeft;
+                                        if (mx) this.scrollLeft = this.sx + mx -
+                                                mx2;
+                                },
+                                mousedown: function (e) {
+                                        this.sx = this.scrollLeft;
+                                        mx = e.pageX - this.offsetLeft;
+                                },
+                                scroll: function () {
+                                        toggleArrows();
+                                }
+                        });
+
+                        $(document).on("mouseup", function () {
+                                mx = 0;
+                        });
+
+                        function toggleArrows() {
+                                if (box.scrollLeft() > maxScrollWidth - 10) {
+                                        // disable next button when right end has reached 
+                                        nextArrow.addClass('disabled');
+                                } else if (box.scrollLeft() < 10) {
+                                        // disable prev button when left end has reached 
+                                        prevArrow.addClass('disabled')
+                                } else {
+                                        // both are enabled
+                                        nextArrow.removeClass('disabled');
+                                        prevArrow.removeClass('disabled');
+                                }
+                        }
+
+                });
 
 
-    <div class="containers">
-        <div class="hs__wrapper">
-            <div class="hs__header">
-                <h2 class="hs__headline">News Musics
-                </h2>
-                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-            </div>
-            <ul class="hs">
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r1.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">SO HOW ?</span><span
-                            class="hs__item__subtitle">Remix Niykee Heaton (infinity)</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r2.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">THE GAME</span><span
-                            class="hs__item__subtitle">Remix Banks (waiting Game)</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r3.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">WHEN I MET YOU</span><span
-                            class="hs__item__subtitle">Remix Daughter (medicine)</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r4.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">WOO</span><span
-                            class="hs__item__subtitle">Remix XXXTENTACION (school Globes)</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r5.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">TAKE ME BACK</span><span
-                            class="hs__item__subtitle">Remix Lord Huron (the Night We Met)</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r6.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">PROJET Y</span><span
-                            class="hs__item__subtitle">by DXNNY</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="img/r7.jpg" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">FALLING SUNLIGHT</span><span
-                            class="hs__item__subtitle">by DXNNY</span></div>
-                </li>
-            </ul>
-        </div>
-        <div class="hs__wrapper">
-            <div class="hs__header">
-                <h2 class="hs__headline">Most Popular
-                </h2>
-                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-            </div>
-            <ul class="hs">
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/103/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 0</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/113/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 1</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/123/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 2</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/133/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 3</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/143/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 4</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/153/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 5</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/163/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 6</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/173/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 7</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/183/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 8</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/193/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 9</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1103/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 10</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1113/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 11</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1123/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 12</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1133/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 13</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1143/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 14</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1153/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 15</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1163/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 16</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1173/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 17</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1183/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 18</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1193/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 19</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1203/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 20</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-            </ul>
-        </div>
-        <div class="hs__wrapper">
-            <div class="hs__header">
-                <h2 class="hs__headline">Album
-                </h2>
-                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-            </div>
-            <ul class="hs">
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/104/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 0</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/114/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 1</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/124/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 2</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/134/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 3</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/144/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 4</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/154/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 5</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/164/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 6</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/174/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 7</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/184/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 8</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/194/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 9</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1104/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 10</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1114/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 11</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1124/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 12</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1134/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 13</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1144/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 14</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1154/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 15</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1164/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 16</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1174/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 17</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1184/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 18</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1194/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 19</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-                <li class="hs__item">
-                    <div class="hs__item__image__wrapper">
-                    <img
-                            class="hs__item__image" src="https://picsum.photos/id/1204/300/300" alt="" />
-                    </div>
-                    <div class="hs__item__description"><span class="hs__item__title">Amazing title 20</span><span
-                            class="hs__item__subtitle">some subtitle</span></div>
-                </li>
-            </ul>
-        </div>
-    </div>
+                var play1 = document.getElementById('play1');
+                play1.onclick = function(){
+                        var carre = document.querySelector('.m1');
+                        carre.classList.toggle('m1bis')
+                }
+                var play2 = document.getElementById('play2');
+                play2.onclick = function(){
+                        var carre = document.querySelector('.m2');
+                        carre.classList.toggle('m2bis')
+                }
+                var play3 = document.getElementById('play3');
+                play3.onclick = function(){
+                        var carre = document.querySelector('.m3');
+                        carre.classList.toggle('m3bis')
+                }
+                var play4 = document.getElementById('play4');
+                play4.onclick = function(){
+                        var carre = document.querySelector('.m4');
+                        carre.classList.toggle('m4bis')
+                }
+                var play5 = document.getElementById('play5');
+                play5.onclick = function(){
+                        var carre = document.querySelector('.m5');
+                        carre.classList.toggle('m5bis')
+                }
+                var play6 = document.getElementById('play6');
+                play6.onclick = function(){
+                        var carre = document.querySelector('.m6');
+                        carre.classList.toggle('m6bis')
+                }
+                var play7 = document.getElementById('play7');
+                play7.onclick = function(){
+                        var carre = document.querySelector('.m7');
+                        carre.classList.toggle('m7bis')
+                }
+                var play8 = document.getElementById('play8');
+                play8.onclick = function(){
+                        var carre = document.querySelector('.m8');
+                        carre.classList.toggle('m8bis')
+                }
+                var play9 = document.getElementById('play9');
+                play9.onclick = function(){
+                        var carre = document.querySelector('.m9');
+                        carre.classList.toggle('m9bis')
+                }
+                var play10 = document.getElementById('play10');
+                play10.onclick = function(){
+                        var carre = document.querySelector('.m10');
+                        carre.classList.toggle('m10bis')
+                }
+                var play11 = document.getElementById('play11');
+                play11.onclick = function(){
+                        var carre = document.querySelector('.m11');
+                        carre.classList.toggle('m11bis')
+                }
+                var play12 = document.getElementById('play12');
+                play12.onclick = function(){
+                        var carre = document.querySelector('.m12');
+                        carre.classList.toggle('m12bis')
+                }
+        </script>
+        <style>
+                .m1 {
+                        display: none;
+                }
+                .m1bis {
+                        display: block;
 
+                }
+                .m2 {
+                        display: none;
+                }
+                .m2bis {
+                        display: block;
 
-    <script>
-        // work in progress - needs some refactoring and will drop JQuery i promise :)
-        var instance = $(".hs__wrapper");
-        $.each(instance, function (key, value) {
+                }
+                .m3 {
+                        display: none;
+                }
+                .m3bis {
+                        display: block;
 
-            var arrows = $(instance[key]).find(".arrow"),
-                prevArrow = arrows.filter('.arrow-prev'),
-                nextArrow = arrows.filter('.arrow-next'),
-                box = $(instance[key]).find(".hs"),
-                x = 0,
-                mx = 0,
-                maxScrollWidth = box[0].scrollWidth - (box[0].clientWidth / 2) - (box.width() / 2);
+                }
+                .m4 {
+                        display: none;
+                }
+                .m4bis {
+                        display: block;
 
-            $(arrows).on('click', function () {
+                }
+                .m5 {
+                        display: none;
+                }
+                .m5bis {
+                        display: block;
 
-                if ($(this).hasClass("arrow-next")) {
-                    x = ((box.width() / 2)) + box.scrollLeft() - 10;
-                    box.animate({
-                        scrollLeft: x,
-                    })
-                } else {
-                    x = ((box.width() / 2)) - box.scrollLeft() - 10;
-                    box.animate({
-                        scrollLeft: -x,
-                    })
+                }
+                .m6 {
+                        display: none;
+                }
+                .m6bis {
+                        display: block;
+
+                }
+                .m7 {
+                        display: none;
+                }
+                .m7bis {
+                        display: block;
+
+                }
+                .m8 {
+                        display: none;
+                }
+                .m8bis {
+                        display: block;
+
+                }
+                .m9 {
+                        display: none;
+                }
+                .m9bis {
+                        display: block;
+
+                }
+                .m10 {
+                        display: none;
+                }
+                .m10bis {
+                        display: block;
+
+                }
+                .m11 {
+                        display: none;
+                }
+                .m11bis {
+                        display: block;
+
+                }
+                .m12 {
+                        display: none;
+                }
+                .m12bis {
+                        display: block;
+
                 }
 
-            });
-
-            $(box).on({
-                mousemove: function (e) {
-                    var mx2 = e.pageX - this.offsetLeft;
-                    if (mx) this.scrollLeft = this.sx + mx - mx2;
-                },
-                mousedown: function (e) {
-                    this.sx = this.scrollLeft;
-                    mx = e.pageX - this.offsetLeft;
-                },
-                scroll: function () {
-                    toggleArrows();
-                }
-            });
-
-            $(document).on("mouseup", function () {
-                mx = 0;
-            });
-
-            function toggleArrows() {
-                if (box.scrollLeft() > maxScrollWidth - 10) {
-                    // disable next button when right end has reached 
-                    nextArrow.addClass('disabled');
-                } else if (box.scrollLeft() < 10) {
-                    // disable prev button when left end has reached 
-                    prevArrow.addClass('disabled')
-                } else {
-                    // both are enabled
-                    nextArrow.removeClass('disabled');
-                    prevArrow.removeClass('disabled');
-                }
-            }
-
-        });
-    </script>
+        </style>
 
 </body>
 
