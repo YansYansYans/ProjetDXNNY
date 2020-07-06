@@ -6,7 +6,7 @@
 a {
     text-decoration: none;
 }
-  body {
+  .body-home {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -511,209 +511,6 @@ a {
 		border-radius: 50%;
 	}
 
-
-
-@keyframes circle10Animation {
-	0% {
-		transform: translate(-50%, -50%) scale(1);
-	}
-	4%, 30% {
-		transform: translate(-50%, -50%) scale(0.93);
-		opacity: 1;
-	}
-	35%, 93% {
-		transform: translate(-50%, -50%) scale(0);
-		opacity: 0;
-	}
-	98%, 100% {
-		transform: translate(-50%, -50%) scale(1);
-		opacity: 1;
-	}
-}
-
-
-.circle-11 {
-	top: 50%; left: 50%;
-	width: 190px; height: 190px;
-	background: repeating-conic-gradient(from 0deg, rgba(229, 243, 255, 0.1) 0deg 1deg, transparent 1deg 8deg, rgba(229, 243, 255, 0.3) 8deg 9deg, transparent 9deg 10deg, rgba(229, 243, 255, 0.1) 10deg 11deg, transparent 11deg 72deg);
-	clip-path: url(#bagel1);
-	border-radius: 50%;
-
-	animation: circle11Animation 4s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes circle11Animation {
-	0%, 98%, 100% {
-		transform: translate(-50%, -50%) rotate(0deg);
-		opacity: 1;
-	}
-	15% {
-		transform: translate(-50%, -50%) rotate(45deg);
-	}
-	25% {
-		transform: translate(-50%, -50%) rotate(-10deg);
-	}
-	30% {
-		opacity: 1;
-	}
-	35% {
-		transform: translate(-50%, -50%) rotate(-20deg);
-		opacity: 0;
-	}
-	93% {
-		transform: translate(-50%, -50%) rotate(80deg);
-		opacity: 0;
-	}
-}
-
-
-.circle-12 {
-	top: 50%; left: 50%;
-	width: 190px; height: 190px;
-	background: repeating-conic-gradient(from 0deg, rgba(208, 233, 255, 0.2) 20deg 21deg, transparent 21deg 40deg, rgba(192, 223, 249, 0.25) 40deg 41deg, transparent 41deg 43deg, rgba(179, 220, 255, 0.15) 43deg 44deg, transparent 44deg 76deg);
-	clip-path: url(#bagel1);
-	border-radius: 50%;
-
-	animation: circle12Animation 4s cubic-bezier(1, 0, 1, 1) infinite;
-}
-@keyframes circle12Animation {
-	0%, 96%, 100% {
-		transform: translate(-50%, -50%) rotate(0deg);
-		opacity: 1;
-	}
-	10% {
-		transform: translate(-50%, -50%) rotate(45deg);
-	}
-	25% {
-		transform: translate(-50%, -50%) rotate(-45deg);
-	}
-	30% {
-		opacity: 1;
-	}
-	35% {
-		transform: translate(-50%, -50%) rotate(50deg);
-		opacity: 0;
-	}
-	93% {
-		transform: translate(-50%, -50%) rotate(-90deg);
-		opacity: 0;
-	}
-}
-
-
-.circle-13 {
-	width: 100px; height: 100px;
-	transform: translate(-50%, -50%);
-	animation: circle13AnimationSize 4s cubic-bezier(1, 0, 1, 1) infinite,
-						 circle13AnimationView 4s ease infinite;
-}
-	.circle-13::before {
-		width: 110px; height: 110px;
-		border-radius: 50%;
-		border: 1px solid rgb(251, 251, 251);
-		transform: translate(-50%, -50%);
-	}
-	.circle-13::after {
-		width: 120px; height: 120px;
-		border-radius: 50%;
-		border: 1px solid rgba(251, 251, 251, 0.5);
-		transform: translate(-50%, -50%);
-	}
-@keyframes circle13AnimationSize {
-	0%, 32%, 86%, 100% { transform: translate(-50%, -50%) scale(1); }
-	38%, 82% { transform: translate(-50%, -50%) scale(0.2); }
-}
-@keyframes circle13AnimationView {
-	/* подвигать */
-	0% { opacity: 1; }
-	2.5% { opacity: 0.5; }
-	5.7% { opacity: 1; }
-	6.6% { opacity: 0.5; }
-	7.4% { opacity: 1; }
-	8.2% { opacity: 0.5; }
-	9.8% { opacity: 1; }
-	10.7% { opacity: 0.5; }
-	11.5%, 14% { opacity: 1; }
-	14.8% { opacity: 0.5; }
-	15.6% { opacity: 1; }
-	18% { opacity: 0.5; }
-	18.9% { opacity: 1; }
-	20.5% { opacity: 0.5; }
-	21.3% { opacity: 1; }
-	22.1% { opacity: 0.5; }
-	23.8% { opacity: 1; }
-	24.6% { opacity: 0.5; }
-	25.4% { opacity: 1; }
-	27.9% { opacity: 0.5; }
-	28.7%, 32% { opacity: 1; }
-	38% { opacity: 0; }
-	82% { opacity: 0; }
-	86% { opacity: 1; }
-	88.6% { opacity: 0.5; }
-	90.2% { opacity: 0; }
-	91.8% { opacity: 1; }
-	92.7% { opacity: 0; }
-	93.5% { opacity: 1; }
-	96.8% { opacity: 0; }
-	97.6% { opacity: 1; }
-	99.2% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
-.circle-14 {
-	width: 100px; height: 100px;
-	transform: translate(-50%, -50%);
-	animation: circle13AnimationSize 4s -0.15s cubic-bezier(1, 0, 1, 1) infinite,
-						 circle14AnimationView 4s ease infinite;
-}
-	.circle-14::before {
-		width: 70px; height: 70px;
-		border-radius: 50%;
-		border: 1px solid rgba(251, 251, 251, 0.5);
-		transform: translate(-50%, -50%);
-	}
-	.circle-14::after {
-		width: 95px; height: 95px;
-		border-radius: 50%;
-		border: 1px solid rgba(251, 251, 251, 0.3);
-		transform: translate(-50%, -50%);
-	}
-
-@keyframes circle14AnimationView {
-	/* подвигать */
-	0% { opacity: 1; }
-	2.5% { opacity: 0.5; }
-	5.7% { opacity: 1; }
-	6.6% { opacity: 0.5; }
-	7.4% { opacity: 1; }
-	8.2% { opacity: 0.5; }
-	9.8% { opacity: 1; }
-	10.7% { opacity: 0.5; }
-	11.5%, 14% { opacity: 1; }
-	14.8% { opacity: 0.5; }
-	15.6% { opacity: 1; }
-	18% { opacity: 0.5; }
-	18.9% { opacity: 1; }
-	20.5% { opacity: 0.5; }
-	21.3% { opacity: 1; }
-	22.1% { opacity: 0.5; }
-	23.8% { opacity: 1; }
-	24.6% { opacity: 0.5; }
-	25.4% { opacity: 1; }
-	27.9% { opacity: 0.5; }
-	28.7%, 32% { opacity: 1; }
-	38% { opacity: 0; }
-	82% { opacity: 0; }
-	86% { opacity: 1; }
-	88.6% { opacity: 0.5; }
-	90.2% { opacity: 0; }
-	91.8% { opacity: 1; }
-	92.7% { opacity: 0; }
-	93.5% { opacity: 1; }
-	96.8% { opacity: 0; }
-	97.6% { opacity: 1; }
-	99.2% { opacity: 0; }
-	100% { opacity: 1; }
-}
 
 
 .glitch {
@@ -1363,4 +1160,100 @@ ul {
   top: 0;
   bottom: 0;
 
+}
+
+
+
+
+
+
+.body-about {
+
+  background: #212121;
+}
+.about-main-title {
+  width: 100%;
+  margin: auto;
+  margin-top: 400px;
+  margin-bottom: 400px;
+}
+.about-main-title h1 {
+
+  font-family: 'arconrounded-regular';
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+
+  white-space: wrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+
+
+.body-contact {
+  background-color: #222;
+  & .main-contact {
+    margin-top: 50vh;
+    text-align: center;
+    & h2 {
+      font-family: 'arconrounded-regular';
+      margin-bottom: 50px;
+      color: #b7ac7f;
+    }
+    & i:hover {
+      color: grey;
+      font-size: 3.5em;
+    }
+  }
+}
+.main-contact span {
+  display:table-cell;
+  animation:jumb 2s infinite;
+  padding: 0 15px;
+}
+@keyframes jumb {
+  0% {
+    transform:translateY(0px)
+  }
+  50% {
+    transform:translateY(-30px);
+  }
+  100% {
+    transform:translateY(0px)	
+  }
+}
+.main-contact span:nth-child(1) {
+  animation-delay:0s;
+}
+.main-contact span:nth-child(2) {
+  animation-delay:.1s;	
+}
+.main-contact span:nth-child(3) {
+  animation-delay:.2s;
+}
+.main-contact span:nth-child(4) {
+  animation-delay:.3s;	
+}
+.main-contact span:nth-child(5) {
+  animation-delay:.4s;
+}
+.main-contact span:nth-child(6) {
+  animation-delay:.5s;	
+}
+.main-contact span:nth-child(7) {
+  animation-delay:.6s;
 }
