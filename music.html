@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
@@ -10,20 +11,27 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="index.js" async></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
 
         <title>DXNNY - BeatMaker</title>
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
                 integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
                 crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="assets/scss/styles.css">
         <link href="img/logo.ico" rel="shortcut icon" />
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 </head>
 
-<body>
+<body class="body-music">
 
         <div class="burger">
                 <span class="span-music"></span>
@@ -55,161 +63,346 @@
         </nav>
 
 
-        <div class="containers">
-                <div class="hs__wrapper">
-                        <div class="hs__header">
-                                <h2 class="hs__headline">News Musics
-                                </h2>
-                                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a
-                                                class="arrow arrow-next"></a></div>
+        <main class="audioPlayer" id="app">
+                <div class="audioPlayerUI" :class="{'isDisabled': isPlaylistActive}">
+                        <div class="albumImage">
+                                <transition name="ballmove" enter-active-class="animated zoomIn"
+                                        leave-active-class="animated fadeOutDown" mode="out-in">
+                                        <!--<transition name="slide-fade" mode="out-in">-->
+                                        <img @load="onImageLoaded()" :src="musicPlaylist[currentSong].image"
+                                                :key="currentSong" ondragstart="return false;" id="playerAlbumArt">
+                                </transition>
+                                <div class="loader" :key="currentSong">Loading...</div>
                         </div>
-                        <ul class="hs">
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play1">
-                                                <img class="hs__item__image o1" src="img/r1.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">SO HOW
-                                                        ?</span><span class="hs__item__subtitle">Remix Niykee Heaton
-                                                        (infinity)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play2">
-                                                <img class="hs__item__image o2" src="img/r2.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">THE
-                                                        GAME</span><span class="hs__item__subtitle">Remix Banks (waiting
-                                                        Game)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play3">
-                                                <img class="hs__item__image o3" src="img/r3.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">WHEN I MET
-                                                        YOU</span><span class="hs__item__subtitle">Remix Daughter
-                                                        (medicine)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play4">
-                                                <img class="hs__item__image o4" src="img/r4.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">WOO</span><span
-                                                        class="hs__item__subtitle">Remix XXXTENTACION (school
-                                                        Globes)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play5">
-                                                <img class="hs__item__image o5" src="img/r5.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">TAKE ME
-                                                        BACK</span><span class="hs__item__subtitle">Remix Lord Huron
-                                                        (the Night We Met)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play6">
-                                                <img class="hs__item__image o6" src="img/r6.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">PROJET
-                                                        Y</span><span class="hs__item__subtitle">by DXNNY</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play7">
-                                                <img class="hs__item__image o7" src="img/r7.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">FALLING
-                                                        SUNLIGHT</span><span class="hs__item__subtitle">by DXNNY</span>
-                                                        
-                                        </div>
-                                </li>
-                        </ul>
-                </div>
-                <div class="hs__wrapper">
-                        <div class="hs__header">
-                                <h2 class="hs__headline">Most Popular
-                                </h2>
-                                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a
-                                                class="arrow arrow-next"></a></div>
+                        <div class="albumDetails">
+                                <transition name="slide-fade" mode="out-in">
+                                        <p class="title" :key="currentSong">{{ musicPlaylist[currentSong].title }}</p>
+                                </transition>
+                                <transition name="slide-fade" mode="out-in">
+                                        <p class="artist" :key="currentSong">{{ musicPlaylist[currentSong].artist }}</p>
                         </div>
-                        <ul class="hs">
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play8">
-                                                <img class="hs__item__image o8" src="img/p1.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span
-                                                        class="hs__item__title">OXYDE</span><span
-                                                        class="hs__item__subtitle">by DXNNY</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play9">
-                                                <img class="hs__item__image o9" src="img/p3.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span
-                                                        class="hs__item__title">VIRUS</span><span
-                                                        class="hs__item__subtitle">by DXNNY (feat YaProd)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play10">
-                                                <img class="hs__item__image o10" src="img/p4.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span
-                                                        class="hs__item__title">VENUS</span><span
-                                                        class="hs__item__subtitle">by DXNNY</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play11">
-                                                <img class="hs__item__image o11" src="img/r4.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">WOO</span><span
-                                                        class="hs__item__subtitle">Remix XXXTENTACION (school
-                                                        Globes)</span></div>
-                                                        
-                                </li>
-                                <li class="hs__item">
-                                        <div class="hs__item__image__wrapper" id="play12">
-                                                <img class="hs__item__image o12" src="img/r6.jpg" alt="" />
-                                        </div>
-                                        <div class="hs__item__description"><span class="hs__item__title">PROJET
-                                                        Y</span><span class="hs__item__subtitle">by DXNNY</span></div>
-                                                        <audio class="m12" src="song/PROJETY.mp3" controls></audio>
-                                </li>
-                        </ul>
-                </div>
-                <div class="hs__wrapper">
-                        <div class="hs__header">
-                                <h2 class="hs__headline">All Song
-                                </h2>
-                                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a
-                                                class="arrow arrow-next"></a></div>
-                        </div>
-                        <ul class="hs">
-                                
-                        </ul>
-                </div>
-        </div>
 
-        <div class="controlls">
-                <audio class="m1" src="song/sohow.mp3" controls></audio>
-                <audio class="m2" src="song/thegame.mp3" controls></audio>
-                <audio class="m3" src="song/when.mp3" controls></audio>
-                <audio class="m4" src="song/woo.mp3" controls></audio>
-                <audio class="m5" src="song/take.mp3" controls></audio>
-                <audio class="m6" src="song/PROJETY.mp3" controls></audio>
-                <audio class="m7" src="song/failling.mp3" controls></audio>
-                <audio class="m8" src="song/OXYDE.mp3" controls></audio>
-                <audio class="m9" src="song/VIRUS.mp3" controls></audio>
-                <audio class="m10" src="song/VENUS.mp3" controls></audio>
-                <audio class="m11" src="song/woo.mp3" controls></audio>
-                <audio class="m12" src="song/PROJETY.mp3" controls></audio>
-        </div>
+                        <div class="playerButtons">
+                                <a class="button" :class="{'isDisabled':(currentSong==0)}" v-on:click="prevSong()"
+                                        title="Previous Song"><i class="zmdi zmdi-skip-previous"></i></a>
+                                <a class="button play" v-on:click="playAudio()" title="Play/Pause Song">
+                                        <transition name="slide-fade" mode="out-in">
+                                                <i class="zmdi"
+                                                        :class="[currentlyStopped ? 'zmdi-stop' : (currentlyPlaying ? 'zmdi-pause-circle' : 'zmdi-play-circle')]"
+                                                        :key="1"></i>
+                                        </transition>
+                                </a>
+                                <a class="button" :class="{'isDisabled':(currentSong==musicPlaylist.length-1)}"
+                                        v-on:click="nextSong()" title="Next Song"><i
+                                                class="zmdi zmdi-skip-next"></i></a>
+                        </div>
+
+                        <div class="currentTimeContainer" style="text-align:center">
+                                <span class="currentTime">{{ currentTime | fancyTimeFormat }}</span>
+                                <span class="totalTime"> {{ trackDuration | fancyTimeFormat }}</span>
+                        </div>
+
+                        <div class="currentProgressBar">
+                                <div class="currentProgress" :style="{ width: currentProgressBar + '%' }"></div>
+                        </div>
+                </div>
+                <div class="audioPlayerList" :class="{'isActive': isPlaylistActive}">
+                        <div class="item" v-for="(item,index) in musicPlaylist"
+                                v-bind:class="{ 'isActive':isCurrentSong(index) }"
+                                v-on:click="changeSong(index),isPlaylistActive=!isPlaylistActive">
+                                <p class="title">{{ item.title }}</p>
+                                <p class="artist">{{ item.artist }}</p>
+                        </div>
+                </div>
+        </main>
+
+        <style>
+                @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+                @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+                * {
+                        box-sizing: border-box;
+                }
+
+                .animated {
+                        -webkit-animation-duration: 0.5s;
+                        animation-duration: 0.5s;
+                }
+
+                .audioPlayer {
+                        position: relative;
+                        min-height: 25rem;
+                        width: 100%;
+                        overflow: hidden;
+                        padding: 1.5rem;
+                        margin: 0 auto;
+                        border-radius: 0.5rem;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        margin-top: 200px;
+                        font-family: 'arconrounded-regular';
+                }
+
+                .audioPlayer .nav-icon {
+                        width: 15px;
+                        height: 12px;
+                        position: absolute;
+                        top: 1.125rem;
+                        left: 1.5rem;
+                        -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                        -webkit-transition: 0.25s ease-in-out;
+                        transition: 0.25s ease-in-out;
+                        cursor: pointer;
+                }
+
+                .audioPlayer .nav-icon span {
+                        display: block;
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        background: black;
+                        border-radius: 6px;
+                        opacity: 1;
+                        left: 0;
+                        -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                        -webkit-transition: 0.5s ease-in-out;
+                        transition: 0.5s ease-in-out;
+                }
+
+                .audioPlayer .nav-icon span:nth-child(1) {
+                        top: 0px;
+                }
+
+                .audioPlayer .nav-icon span:nth-child(2) {
+                        top: 5px;
+                }
+
+                .audioPlayer .nav-icon span:nth-child(3) {
+                        top: 10px;
+                }
+
+                .audioPlayer .nav-icon.isActive span:nth-child(1) {
+                        top: 5px;
+                        -webkit-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                }
+
+                .audioPlayer .nav-icon.isActive span:nth-child(2) {
+                        opacity: 0;
+                        left: -60px;
+                }
+
+                .audioPlayer .nav-icon.isActive span:nth-child(3) {
+                        top: 5px;
+                        -webkit-transform: rotate(-135deg);
+                        transform: rotate(-135deg);
+                }
+
+                .audioPlayer .audioPlayerList {
+                        margin-top: 50px;
+                        text-align: center;
+                }
+
+                .audioPlayer .audioPlayerList.isActive {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                }
+
+                .audioPlayer .audioPlayerList .item {
+                        margin-bottom: 40px;
+                        -webkit-transition: 0.2s;
+                        transition: 0.2s;
+                }
+
+                .audioPlayer .audioPlayerList .item:hover {
+                        padding-left: 0.5rem;
+                        cursor: pointer;
+                }
+
+                .audioPlayer .audioPlayerList .item .title {
+                        color: white;
+                        
+                        font-size: 1.5rem;
+                        margin-bottom: 0.75rem;
+                }
+
+                .audioPlayer .audioPlayerList .item .artist {
+                        color: black;
+                        font-size: 0.8rem;
+                }
+
+                .audioPlayer .audioPlayerList .item.isActive {
+                        opacity: 60%;
+                }
+
+                .audioPlayer .audioPlayerUI .albumDetails {
+                        text-align: center;
+                        margin: 2rem 0;
+                }
+
+                .audioPlayer .audioPlayerUI .albumDetails p {
+                        margin: 0px;
+                }
+
+                .audioPlayer .audioPlayerUI .albumDetails p.title {
+                        font-size: 2.5rem;
+                        color: #b7ac7f;
+                }
+
+                .audioPlayer .audioPlayerUI .albumDetails p.artist {
+                        margin-top: 0.5rem;
+                        font-size: 1.2rem;
+                        font-weight: none;
+                        color: black;
+                        -webkit-transition-delay: 100ms;
+                        transition-delay: 100ms;
+                }
+
+                .audioPlayer .audioPlayerUI .albumImage {
+                        width: 17rem;
+                        height: 17rem;
+                        overflow: hidden;
+                        margin: 0 auto;
+                }
+
+                .audioPlayer .audioPlayerUI .albumImage img {
+                        width: 100%;
+                        height: 100%;
+                        z-index: 10;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        -o-object-position: 50% 50%;
+                        object-position: 50% 50%;
+                        border-radius: 0.5rem;
+                }
+
+                .audioPlayer .audioPlayerUI .playerButtons {
+                        position: relative;
+                        margin: 0 auto;
+                        text-align: center;
+                }
+
+                .audioPlayer .audioPlayerUI .playerButtons .button {
+                        font-size: 2rem;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0.5rem;
+                        margin: 0 0.25rem;
+                        color: black;
+                        border-radius: 50%;
+                        outline: 0;
+                        text-decoration: none;
+                        cursor: pointer;
+                        -webkit-transition: 0.5s;
+                        transition: 0.5s;
+                }
+
+                .audioPlayer .audioPlayerUI .playerButtons .button.play {
+                        font-size: 4rem;
+                        margin: 0 1.5rem;
+                }
+
+                .audioPlayer .audioPlayerUI .playerButtons .button:active {
+                        opacity: 0.75;
+                        -webkit-transform: scale(0.75);
+                        transform: scale(0.75);
+                }
+
+                .audioPlayer .audioPlayerUI .playerButtons .button.isDisabled {
+                        color: black;
+                        cursor: initial;
+                }
+
+                .audioPlayer .audioPlayerUI .playerButtons .button.isDisabled:active {
+                        -webkit-transform: none;
+                        transform: none;
+                }
+
+                .audioPlayer .audioPlayerUI .currentTimeContainer {
+                        width: 100%;
+                        height: 1rem;
+                        display: -webkit-box;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                }
+
+                .audioPlayer .audioPlayerUI .currentTimeContainer .currentTime,
+                .audioPlayer .audioPlayerUI .currentTimeContainer .totalTime {
+                        font-size: 1rem;
+                        font-family: monospace;
+                        color: black;
+                }
+
+                .audioPlayer .audioPlayerUI .currentProgressBar {
+                        width: 100%;
+                        background-color: white;
+                        margin: 0.75rem 0;
+                }
+
+                .audioPlayer .audioPlayerUI .currentProgressBar .currentProgress {
+                        background-color: #c3b788;
+                        width: 0px;
+                        height: 3px;
+                        -webkit-transition: 10ms;
+                        transition: 10ms;
+                }
+
+                .loader {
+                        margin: 60px auto;
+                        font-size: 10px;
+                        position: relative;
+                        text-indent: -9999em;
+                }
+
+                .slide-fade-enter-active {
+                        -webkit-transition: all 0.3s ease;
+                        transition: all 0.3s ease;
+                }
+
+                .slide-fade-leave-active {
+                        -webkit-transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+                        transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+                }
+
+                .slide-fade-enter,
+                .slide-fade-leave-to {
+                        -webkit-transform: translateY(10px);
+                        transform: translateY(10px);
+                        opacity: 0;
+                }
+
+                .fade-enter-active,
+                .fade-leave-active {
+                        -webkit-transition: opacity 0.5s;
+                        transition: opacity 0.5s;
+                }
+
+                .fade-enter,
+                .fade-leave-to {
+                        opacity: 0;
+                }
+
+                @media all and (max-width: 650px) {
+                        .audioPlayer {
+                                margin-top: 0px;
+                                margin-bottom: 150px;
+                        }
+                }
+        </style>
+
         <script>
+                $('.burger, .overlay').click(function () {
+                        $('.burger').toggleClass('clicked');
+                        $('.overlay').toggleClass('show');
+                        $('nav').toggleClass('show');
+                        $('body').toggleClass('overflow');
+                });
+                
                 // work in progress - needs some refactoring and will drop JQuery i promise :)
                 var instance = $(".hs__wrapper");
                 $.each(instance, function (key, value) {
@@ -275,274 +468,479 @@
                 });
 
 
-                var play1 = document.getElementById('play1');
-                play1.onclick = function(){
-                        var carre = document.querySelector('.m1');
-                        carre.classList.toggle('m1bis');
-                        var opacity = document.querySelector('.o1');
-                        opacity.classList.toggle('o1bis')
-                }
-                var play2 = document.getElementById('play2');
-                play2.onclick = function(){
-                        var carre = document.querySelector('.m2');
-                        carre.classList.toggle('m2bis');
-                        var opacity = document.querySelector('.o2');
-                        opacity.classList.toggle('o2bis')
-                }
-                var play3 = document.getElementById('play3');
-                play3.onclick = function(){
-                        var carre = document.querySelector('.m3');
-                        carre.classList.toggle('m3bis');
-                        var opacity = document.querySelector('.o3');
-                        opacity.classList.toggle('o3bis')
-                }
-                var play4 = document.getElementById('play4');
-                play4.onclick = function(){
-                        var carre = document.querySelector('.m4');
-                        carre.classList.toggle('m4bis');
-                        var opacity = document.querySelector('.o4');
-                        opacity.classList.toggle('o4bis')
-                }
-                var play5 = document.getElementById('play5');
-                play5.onclick = function(){
-                        var carre = document.querySelector('.m5');
-                        carre.classList.toggle('m5bis');
-                        var opacity = document.querySelector('.o5');
-                        opacity.classList.toggle('o5bis')
-                }
-                var play6 = document.getElementById('play6');
-                play6.onclick = function(){
-                        var carre = document.querySelector('.m6');
-                        carre.classList.toggle('m6bis');
-                        var opacity = document.querySelector('.o6');
-                        opacity.classList.toggle('o6bis')
-                }
-                var play7 = document.getElementById('play7');
-                play7.onclick = function(){
-                        var carre = document.querySelector('.m7');
-                        carre.classList.toggle('m7bis');
-                        var opacity = document.querySelector('.o7');
-                        opacity.classList.toggle('o7bis')
-                }
-                var play8 = document.getElementById('play8');
-                play8.onclick = function(){
-                        var carre = document.querySelector('.m8');
-                        carre.classList.toggle('m8bis');
-                        var opacity = document.querySelector('.o8');
-                        opacity.classList.toggle('o8bis')
-                }
-                var play9 = document.getElementById('play9');
-                play9.onclick = function(){
-                        var carre = document.querySelector('.m9');
-                        carre.classList.toggle('m9bis');
-                        var opacity = document.querySelector('.o9');
-                        opacity.classList.toggle('o9bis')
-                }
-                var play10 = document.getElementById('play10');
-                play10.onclick = function(){
-                        var carre = document.querySelector('.m10');
-                        carre.classList.toggle('m10bis');
-                        var opacity = document.querySelector('.o10');
-                        opacity.classList.toggle('o10bis')
-                }
-                var play11 = document.getElementById('play11');
-                play11.onclick = function(){
-                        var carre = document.querySelector('.m11');
-                        carre.classList.toggle('m11bis');
-                        var opacity = document.querySelector('.o11');
-                        opacity.classList.toggle('o11bis')
-                }
-                var play12 = document.getElementById('play12');
-                play12.onclick = function(){
-                        var carre = document.querySelector('.m12');
-                        carre.classList.toggle('m12bis');
-                        var opacity = document.querySelector('.o12');
-                        opacity.classList.toggle('o12bis')
-                }
+                var app = new Vue({
+                        el: "#app",
+                        data: {
+                                audio: "",
+                                imgLoaded: false,
+                                currentlyPlaying: false,
+                                currentlyStopped: false,
+                                currentTime: 0,
+                                checkingCurrentPositionInTrack: "",
+                                trackDuration: 0,
+                                currentProgressBar: 0,
+                                isPlaylistActive: false,
+                                currentSong: 0,
+                                debug: false,
+                                musicPlaylist: [{
+                                                title: "TAKE ME BACK",
+                                                artist: "by DXNNY",
+                                                url: "song/take.mp3",
+                                                image: "song/take.jpg"
+                                        },
+                                        {
+                                                title: "WOO",
+                                                artist: "by DXNNY",
+                                                url: "song/woo.mp3",
+                                                image: "song/woo.jpg"
+                                        },
+                                        {
+                                                title: "WHEN I MET YOU",
+                                                artist: "by DXNNY",
+                                                url: "song/when.mp3",
+                                                image: "song/when.jpg"
+                                        },
+                                        {
+                                                title: "THE GAME",
+                                                artist: "by DXNNY",
+                                                url: "song/thegame.mp3",
+                                                image: "song/thegame.jpg"
+                                        },
+                                        {
+                                                title: "SO HOW",
+                                                artist: "by DXNNY",
+                                                url: "song/sohow.mp3",
+                                                image: "song/sohow.jpg"
+                                        },
+                                        {
+                                                title: "PROJET Y",
+                                                artist: "by DXNNY",
+                                                url: "song/projety.mp3",
+                                                image: "song/projety.jpg"
+                                        },
+                                        {
+                                                title: "FAILLING SUNLIGHT",
+                                                artist: "by DXNNY",
+                                                url: "song/failling.mp3",
+                                                image: "song/failling.jpg"
+                                        },
+                                        {
+                                                title: "NOONECANUNDERSTANDME 2",
+                                                artist: "by DXNNY",
+                                                url: "song/noon.mp3",
+                                                image: "song/noon.jpg"
+                                        },
+                                        {
+                                                title: "DARKNESS PART 1",
+                                                artist: "by DXNNY",
+                                                url: "song/dark.mp3",
+                                                image: "song/dark.jpg"
+                                        },
+                                        {
+                                                title: "OXYDE",
+                                                artist: "by DXNNY",
+                                                url: "song/oxyde.mp3",
+                                                image: "song/oxyde.jpg"
+                                        },
+                                        {
+                                                title: "VIRUS",
+                                                artist: "by DXNNY feat Yaprod",
+                                                url: "song/virus.mp3",
+                                                image: "song/virus.jpg"
+                                        },
+                                        {
+                                                title: "VENUS",
+                                                artist: "by DXNNY",
+                                                url: "song/venus.mp3",
+                                                image: "song/venus.jpg"
+                                        },
+                                        {
+                                                title: "MARS",
+                                                artist: "by DXNNY",
+                                                url: "song/mars.mp3",
+                                                image: "song/mars.jpg"
+                                        },
+                                        {
+                                                title: "JUPITER",
+                                                artist: "by DXNNY",
+                                                url: "song/jupiter.mp3",
+                                                image: "song/jupiter.jpg"
+                                        },
+                                        {
+                                                title: "EKINOX",
+                                                artist: "by DXNNY",
+                                                url: "song/ekinox.mp3",
+                                                image: "song/ekinox.jpg"
+                                        },
+                                        {
+                                                title: "CALYPSO",
+                                                artist: "by DXNNY",
+                                                url: "song/calypso.mp3",
+                                                image: "song/calypso.jpg"
+                                        }
+                                ],
+                                audioFile: ""
+                        },
+                        mounted: function () {
+                                this.changeSong();
+                                this.audio.loop = false;
+                        },
+                        filters: {
+                                fancyTimeFormat: function (s) {
+                                        return (s - (s %= 60)) / 60 + (9 < s ? ":" : ":0") + s;
+                                }
+                        },
+                        methods: {
+                                togglePlaylist: function () {
+                                        this.isPlaylistActive = !this.isPlaylistActive;
+                                },
+                                nextSong: function () {
+                                        if (this.currentSong < this.musicPlaylist.length - 1)
+                                                this.changeSong(this.currentSong + 1);
+                                },
+                                prevSong: function () {
+                                        if (this.currentSong > 0) this.changeSong(this
+                                                .currentSong - 1);
+                                },
+                                changeSong: function (index) {
+                                        var wasPlaying = this.currentlyPlaying;
+                                        this.imageLoaded = false;
+                                        if (index !== undefined) {
+                                                this.stopAudio();
+                                                this.currentSong = index;
+                                        }
+                                        this.audioFile = this.musicPlaylist[this.currentSong]
+                                                .url;
+                                        this.audio = new Audio(this.audioFile);
+                                        var localThis = this;
+                                        this.audio.addEventListener("loadedmetadata",
+                                        function () {
+                                                localThis.trackDuration = Math
+                                                        .round(this.duration);
+                                        });
+                                        this.audio.addEventListener("ended", this.handleEnded);
+                                        if (wasPlaying) {
+                                                this.playAudio();
+                                        }
+                                },
+                                isCurrentSong: function (index) {
+                                        if (this.currentSong == index) {
+                                                return true;
+                                        }
+                                        return false;
+                                },
+                                getCurrentSong: function (currentSong) {
+                                        return this.musicPlaylist[currentSong].url;
+                                },
+                                playAudio: function () {
+                                        if (
+                                                this.currentlyStopped == true &&
+                                                this.currentSong + 1 == this.musicPlaylist
+                                                .length
+                                        ) {
+                                                this.currentSong = 0;
+                                                this.changeSong();
+                                        }
+                                        if (!this.currentlyPlaying) {
+                                                this.getCurrentTimeEverySecond(true);
+                                                this.currentlyPlaying = true;
+                                                this.audio.play();
+                                        } else {
+                                                this.stopAudio();
+                                        }
+                                        this.currentlyStopped = false;
+                                },
+                                stopAudio: function () {
+                                        this.audio.pause();
+                                        this.currentlyPlaying = false;
+                                        this.pausedMusic();
+                                },
+                                handleEnded: function () {
+                                        if (this.currentSong + 1 == this.musicPlaylist.length) {
+                                                this.stopAudio();
+                                                this.currentlyPlaying = false;
+                                                this.currentlyStopped = true;
+                                        } else {
+                                                this.currentlyPlaying = false;
+                                                this.currentSong++;
+                                                this.changeSong();
+                                                this.playAudio();
+                                        }
+                                },
+                                onImageLoaded: function () {
+                                        this.imgLoaded = true;
+                                },
+                                getCurrentTimeEverySecond: function (startStop) {
+                                        var localThis = this;
+                                        this.checkingCurrentPositionInTrack = setTimeout(
+                                                function () {
+                                                        localThis.currentTime =
+                                                                localThis.audio
+                                                                .currentTime;
+                                                        localThis.currentProgressBar =
+                                                                localThis.audio
+                                                                .currentTime / localThis
+                                                                .trackDuration * 100;
+                                                        localThis
+                                                                .getCurrentTimeEverySecond(
+                                                                        true);
+                                                }.bind(this),
+                                                1000
+                                        );
+                                },
+                                pausedMusic: function () {
+                                        clearTimeout(this.checkingCurrentPositionInTrack);
+                                },
+                                toggleDebug: function () {
+                                        this.debug = !this.debug;
+                                        document.body.classList.toggle('debug');
+                                }
+                        },
+                        watch: {
+                                currentTime: function () {
+                                        this.currentTime = Math.round(this.currentTime);
+                                }
+                        },
+                        beforeDestroy: function () {
+                                this.audio.removeEventListener("ended", this.handleEnded);
+                                this.audio.removeEventListener("loadedmetadata", this
+                                        .handleEnded);
+
+                                clearTimeout(this.checkingCurrentPositionInTrack);
+                        }
+                });
         </script>
         <style>
                 .m1 {
                         display: none;
                 }
+
                 .o1 {
                         opacity: 100%;
                 }
+
                 .m1bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o1bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m2 {
                         display: none;
                 }
+
                 .o2 {
                         opacity: 100%;
                 }
+
                 .m2bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o2bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m3 {
                         display: none;
                 }
+
                 .o3 {
                         opacity: 100%;
                 }
+
                 .m3bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o3bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m4 {
                         display: none;
                 }
+
                 .o4 {
                         opacity: 100%;
                 }
+
                 .m4bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o4bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m5 {
                         display: none;
                 }
+
                 .o5 {
                         opacity: 100%;
                 }
+
                 .m5bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o5bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m6 {
                         display: none;
                 }
+
                 .o6 {
                         opacity: 100%;
                 }
+
                 .m6bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o6bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m7 {
                         display: none;
                 }
+
                 .o7 {
                         opacity: 100%;
                 }
+
                 .m7bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o7bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m8 {
                         display: none;
                 }
+
                 .o8 {
                         opacity: 100%;
                 }
+
                 .m8bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o8bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m9 {
                         display: none;
                 }
+
                 .o9 {
                         opacity: 100%;
                 }
+
                 .m9bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o9bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m10 {
                         display: none;
                 }
+
                 .o10 {
                         opacity: 100%;
                 }
+
                 .m10bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o10bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m11 {
                         display: none;
                 }
+
                 .o11 {
                         opacity: 100%;
                 }
+
                 .m11bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o11bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 .m12 {
                         display: none;
                 }
+
                 .o12 {
                         opacity: 100%;
                 }
+
                 .m12bis {
                         display: block;
                         position: fixed;
                         bottom: 0;
                 }
+
                 .o12bis {
                         opacity: 50%;
                         box-shadow: 0px 0px 10px black;
                 }
+
                 audio {
-                        width: 100%;        
+                        width: 100%;
                 }
         </style>
 
