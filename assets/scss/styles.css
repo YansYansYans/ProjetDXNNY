@@ -381,7 +381,11 @@ nav ul.sub li a:hover {
 
 @media all and (max-width: 650px) {
   .div-title {
-    margin-top: -50px;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    vertical-align: middle;
   }
 }
 

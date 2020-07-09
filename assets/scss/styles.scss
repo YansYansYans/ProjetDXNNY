@@ -371,7 +371,9 @@ a {
 
 @media all and (max-width: 650px) {
   .div-title {
-margin-top: -50px;
+    display: block;
+    justify-content: center;
+    vertical-align: middle;
 }
 }
 
